@@ -1225,56 +1225,20 @@ ul {
 }
 
 #footer {
-    padding-top: 6.25rem;
-    padding-bottom: 2.5rem;
-    background-image: url("/assets/images/footer/footer-bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  padding-top: 6.25rem;
+  padding-bottom: 2.5rem;
+  background-image: url("/assets/images/footer/footer-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#footer .row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: 0 -15px;
+@media (max-width: 768px) {
+  #footer {
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+  }
 }
-
-#footer .col-sm-4,
-#footer .col-4,
-#footer .col-8,
-#footer .col-sm-2,
-#footer .col-sm-3 {
-    flex: 0 0 auto;
-    padding: 0 15px;
-    min-width: 0;
-}
-
-#footer .col-sm-4 {
-    width: 35%;
-}
-
-#footer .col-sm-3 {
-    width: 25%;
-}
-
-#footer .col-sm-2 {
-    width: 20%;
-}
-
-@media (max-width: 991px) {
-    #footer .row {
-        flex-direction: column;
-    }
-    
-    #footer .col-sm-4,
-    #footer .col-sm-3,
-    #footer .col-sm-2 {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-}
-
 .footer-side-1 .footer-logo {
   margin-bottom: 2.625rem;
 }
@@ -1429,37 +1393,11 @@ ul {
 }
 
 .footer-social {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-social li a {
-    color: white;
-    background: var(--primary);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    display: flex;
-    padding: 0.5rem 1rem;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 50px;
-    gap: 0.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    white-space: nowrap;
-    width: 100%;
-}
-
-.footer-social li a span {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.footer-social li a:hover {
-    transform: translateY(-3px);
-    background: var(--primary-light);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: end;
+  margin-bottom: 2.625rem;
 }
 
 @media (max-width: 768px) {
@@ -1469,6 +1407,24 @@ ul {
     justify-content: center;
   }
 }
+.footer-social li a {
+  color: var(--white);
+  background: #ddd;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  width: 1.875rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.footer-social li a:hover {
+  opacity: 0.8;
+  color: var(--primary);
+}
+
 .copyright {
     color: var(--text-of-white);
     font-size: 0.875rem;
