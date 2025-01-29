@@ -1554,9 +1554,15 @@ ul {
 
 .diversity-values {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 3rem 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .diversity-values {
+        grid-template-columns: 1fr;
+    }
 }
 
 .value-card {
