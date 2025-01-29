@@ -1107,6 +1107,8 @@ ul {
 
 .accordion .accordion-body {
   padding-left: 5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 991px) {
