@@ -762,7 +762,7 @@ ul {
 }
 
 .counting-wrap .counter-value {
-  color: var(--primary);
+  color: #ffffff;
   text-align: center;
   font-size: 3.875rem;
   margin-bottom: 1.125rem;
@@ -770,7 +770,7 @@ ul {
 }
 
 .counting-wrap .counter-desc {
-  color: #616161;
+  color: #ffffff;
   text-align: center;
   font-size: 1.125rem;
   font-weight: 300;
