@@ -10,7 +10,7 @@
     --black: #000000;
     --text-primary: #203556;
     --text-secondary: #203556;
-    --text-of-white: #7d7d7d;
+    --text-of-white: #ffffff;
 }
 
 html {
@@ -755,7 +755,7 @@ ul {
   }
 }
 .catch-percent-card .desc {
-  color: var(--text-of-white);
+  color: #ffffff;
   font-size: 0.875rem;
   line-height: 140%; /* 19.6px */
   font-weight: 300;
@@ -813,7 +813,7 @@ ul {
 }
 
 .product-card .content .text {
-  color: var(----text-secondary);
+  color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 400;
 }
@@ -1032,7 +1032,7 @@ ul {
   right: -30px;
   width: 105px;
   height: 75px;
-  background-image: url("/assets/images/icon/line5.svg");
+  background-image: url("/assets/images/icon/icon/line5.svg");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
