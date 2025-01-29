@@ -1570,13 +1570,12 @@ ul {
 
 .card-title {
     color: var(--primary);
-    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'Jost', sans-serif; /* Added Jost font */
-    font-size: 1.2rem; /* Increased font size */
+    font-family: 'Jost', sans-serif;
+    font-size: 1.8rem;
 }
 
 .requirement-list {
@@ -1590,8 +1589,8 @@ ul {
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-secondary);
-    font-family: 'Jost', sans-serif; /* Added Jost font */
-    font-size: 1.2rem; /* Increased font size */
+    font-family: 'Jost', sans-serif;
+    font-size: 1.4rem;
 }
 
 .requirement-list li::before {
@@ -1613,8 +1612,8 @@ ul {
 .apply-section h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    font-family: 'Jost', sans-serif; /* Added Jost font */
-    font-size: 1.2rem; /* Increased font size */
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
 }
 
 .apply-section .btn--primary {
@@ -1632,9 +1631,9 @@ ul {
 }
 
 .Hohe-Mitarbeiterzufriedenheit {
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 1.5rem;
 }
 
 .Fresenius-Umwelttechnik {
-    color: var(--primary); /* Changed color to primary */
+    color: var(--primary);
 }
