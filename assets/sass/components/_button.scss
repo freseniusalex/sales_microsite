@@ -1,16 +1,19 @@
 .btn--primary {
 	color: var(--white);
 	font-size: rem(14);
-	font-weight: 400;
-	border-radius: rem(30);
+	font-weight: 500;
+	border-radius: rem(8);
 	background: var(--primary);
 	display: inline-flex;
-	padding: rem(15) rem(25);
-	align-items: flex-start;
+	padding: rem(12) rem(20);
+	align-items: center;
 	gap: rem(10);
 	transition: all 0.3s ease;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	&:hover {
-		opacity: 0.8;
+		background: var(--primary-light);
+		transform: translateY(-1px);
+		box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 	}
 }
 .btn--outline {
