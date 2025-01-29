@@ -1801,6 +1801,72 @@ ul {
     color: var(--primary);
 }
 
+/* Gradient CTA Section */
+.cta-gradient-section {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    margin: 4rem 0;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-gradient-section::before,
+.cta-gradient-section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cta-gradient-section::before {
+    top: -100px;
+    left: -100px;
+}
+
+.cta-gradient-section::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+.gradient-cta {
+    color: white;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.gradient-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-gradient-primary {
+    background: white;
+    color: var(--primary);
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-gradient-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: var(--primary);
+}
+
 /* Innovation Section Styles */
 .innovation-section {
     background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
