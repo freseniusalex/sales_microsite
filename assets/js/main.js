@@ -6,14 +6,17 @@
 	$(document).ready(function () {
 		// odometer init
 		if ($('.odometer').length) {
-			window.odometerOptions = {
-				format: 'd'
-			};
 			var odo = $('.odometer');
 			odo.each(function () {
+				var od = new Odometer({
+					el: this,
+					value: 0,
+					format: 'ddd',
+					theme: 'default'
+				});
 				$(this).appear(function () {
 					var countNumber = $(this).attr('data-count');
-					$(this).html(countNumber);
+					od.update(countNumber);
 				});
 			});
 		}
