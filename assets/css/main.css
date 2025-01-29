@@ -293,32 +293,6 @@ ul {
     padding-bottom: 4.375rem;
 }
 
-#banner::before {
-    content: "";
-    position: absolute;
-    bottom: 30%;
-    left: 0;
-    width: 105px;
-    height: 75px;
-    background-image: url("/assets/images/icon/line4.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
-
-#banner::after {
-    content: "";
-    position: absolute;
-    bottom: 33%;
-    left: 20%;
-    width: 17px;
-    height: 23px;
-    background-image: url("/assets/images/icon/star2.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
-
 @media (max-width: 991px) {
     #banner {
         padding-top: 9.375rem;
@@ -876,31 +850,6 @@ ul {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(36, 56, 149, 0.1) 7.53%, rgba(15, 24, 63, 0.1) 92.58%, rgba(255, 255, 255, 0.1) 100%);
 }
 
-#recent-project::before {
-  content: "";
-  position: absolute;
-  top: 20%;
-  right: -30px;
-  width: 105px;
-  height: 75px;
-  background-image: url("/assets/images/icon/line5.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
-
-#recent-project::after {
-  content: "";
-  position: absolute;
-  bottom: 33%;
-  left: 20%;
-  width: 17px;
-  height: 23px;
-  background-image: url("/assets/images/icon/star.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
 
 .my-profile-wrap .my-profile {
   position: relative;
@@ -1048,42 +997,13 @@ ul {
   padding: 6.25rem 0;
 }
 
-#faq::before {
-  content: "";
-  position: absolute;
-  bottom: 20%;
-  right: -30px;
-  width: 105px;
-  height: 75px;
-  background-image: url("/assets/images/icon/icon/line5.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
-
 @media (max-width: 576px) {
   #faq::before {
     display: none;
   }
 }
-#faq::after {
-  content: "";
-  position: absolute;
-  top: 33%;
-  right: 13%;
-  width: 17px;
-  height: 23px;
-  background-image: url("/assets/images/icon/star.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
 
-#faq .circle-animate {
-  top: 50%;
-}
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   #faq {
     padding: 3.125rem 0;
   }
