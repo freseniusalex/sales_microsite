@@ -1426,16 +1426,30 @@ ul {
 }
 
 .copyright {
-  color: var(--text-of-white);
-  font-size: 0.875rem;
-  font-weight: 400;
-  font-family: 'Jost', sans-serif; /* Added Jost font */
-  font-size: 1.2rem; /* Increased font size */
+    color: var(--text-of-white);
+    font-size: 0.875rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author-info {
+    cursor: help;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.author-info:hover {
+    color: var(--primary-light);
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
-  text-align: center;
-  }
+    .copyright {
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 .diversity-section {
