@@ -1868,8 +1868,8 @@ ul {
 }
 
 .btn-gradient-primary {
-    background: white;
-    color: var(--primary);
+    background: var(--primary);
+    color: white;
     font-size: 1.2rem;
     padding: 1rem 2.5rem;
     border-radius: 50px;
@@ -1882,7 +1882,8 @@ ul {
 .btn-gradient-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    color: var(--primary);
+    background: var(--primary-light);
+    color: white;
 }
 
 /* Innovation Section Styles */
