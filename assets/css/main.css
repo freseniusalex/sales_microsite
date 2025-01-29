@@ -684,7 +684,7 @@ ul {
 
 .testimonials-card .content .quote {
   color: var(--text-of-white);
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   font-weight: 400;
 }
 
@@ -1590,7 +1590,7 @@ ul {
     position: relative;
     color: var(--text-secondary);
     font-family: 'Jost', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .requirement-list li::before {
@@ -1613,7 +1613,7 @@ ul {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: 'Jost', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
 }
 
 .apply-section .btn--primary {
