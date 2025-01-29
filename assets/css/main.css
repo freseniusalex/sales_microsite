@@ -1237,6 +1237,7 @@ ul {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin: 0 -15px;
 }
 
 #footer .col-sm-4,
@@ -1246,23 +1247,24 @@ ul {
 #footer .col-sm-3 {
     flex: 0 0 auto;
     padding: 0 15px;
+    min-width: 0;
 }
 
 #footer .col-sm-4 {
-    width: 30%;
+    width: 35%;
 }
 
 #footer .col-sm-3 {
-    width: 22%;
+    width: 25%;
 }
 
 #footer .col-sm-2 {
-    width: 18%;
+    width: 20%;
 }
 
 @media (max-width: 991px) {
     #footer .row {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     
     #footer .col-sm-4,
