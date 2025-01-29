@@ -14,8 +14,11 @@ $baseFontSize: 16;
 	--black: #000000;
 	--blue: #203556;
 
-	--text-primary: var(--primary);
+	--text-primary: var(--blue);
 	--text-secondary: var(--blue);
+
+	--btn-primary: var(--primary);
+	--btn-hover: var(--primary-light);
 
 	--text-of-white: #7d7d7d;
 }
