@@ -8,9 +8,15 @@
 		if ($('.odometer').length) {
 			var odo = $('.odometer');
 			odo.each(function () {
+				var odometer = new Odometer({
+					el: this,
+					value: 0,
+					format: 'ddd',
+					theme: 'default'
+				});
 				$(this).appear(function () {
 					var countNumber = $(this).attr('data-count');
-					$(this).html(countNumber);
+					odometer.update(countNumber);
 				});
 			});
 		}
