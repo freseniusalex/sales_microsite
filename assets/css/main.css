@@ -684,8 +684,8 @@ ul {
 
 .testimonials-card .content .quote {
   color: var(--text-of-white);
-  font-size: 1.2rem; /* Increased font size */
-  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .testimonials-card .author .avatar img {
