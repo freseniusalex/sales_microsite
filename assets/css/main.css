@@ -345,7 +345,7 @@ ul {
 #banner .banner-title {
     color: var(--text-primary);
     font-size: 5rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 120%;
  /* 96px */
 }
@@ -358,8 +358,8 @@ ul {
 
 #banner .banner-subtitle {
     color: var(--text-secondary);
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.25rem;
+    font-weight: 500;
     line-height: 180%;
  /* 28.8px */
 }
