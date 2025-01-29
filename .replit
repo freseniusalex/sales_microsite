@@ -1,22 +1,12 @@
 
-modules = ["nodejs-20", "web"]
-run = "node index.js"
+run = "python3 -m http.server 3000 --bind 0.0.0.0"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "node index.js"]
-
-[languages.javascript]
-pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
-
-[languages.javascript.languageServer]
-start = ["typescript-language-server", "--stdio"]
+run = ["sh", "-c", "python3 -m http.server 3000 --bind 0.0.0.0"]
 
 [[ports]]
 localPort = 3000
 externalPort = 80
-
-[http_service]
-command = "python3 -m http.server 3000 --bind 0.0.0.0"

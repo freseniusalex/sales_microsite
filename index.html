@@ -1110,15 +1110,14 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-    if (location.hostname.includes('.repl.co') || location.hostname.includes('.repl.dev')) {
-      let ws = new WebSocket(`wss://${location.hostname.replace('.repl.co', '.repl.dev')}`);
-      ws.onmessage = msg => {
-        if (msg.data === 'reload') {
-          location.reload();
-        }
-      };
-      ws.onerror = () => { };
-    }
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const ws = new WebSocket(`${protocol}//${window.location.host}`);
+    ws.onmessage = msg => {
+      if (msg.data === 'reload') {
+        window.location.reload();
+      }
+    };
+    ws.onerror = () => { };
   </script>
 </body>
 
