@@ -124,7 +124,7 @@ ul {
 .section-header .section-subtitle {
     color: var(--text-secondary);
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 140%;
 }
