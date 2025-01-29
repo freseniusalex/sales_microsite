@@ -275,10 +275,11 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 	const sections = [
 		'banner',
-		'about-me',
+		'testimonials',
 		'recent-project',
-		'service',
-		'contact',
+		'about-me',
+		'innovation',
+		'faq'
 	]; // Specific IDs for your sections
 	const navLinks = document.querySelectorAll('.menu ul li a');
 
