@@ -1,0 +1,46 @@
+.btn--primary {
+	color: var(--white);
+	font-size: rem(14);
+	font-weight: 400;
+	border-radius: rem(30);
+	background: var(--primary);
+	display: inline-flex;
+	padding: rem(15) rem(25);
+	align-items: flex-start;
+	gap: rem(10);
+	transition: all 0.3s ease;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.btn--outline {
+	color: var(--primary);
+	font-size: rem(14);
+	font-weight: 400;
+	border-radius: rem(30);
+	background: var(--white);
+	display: inline-flex;
+	padding: rem(15) rem(25);
+	align-items: flex-start;
+	gap: rem(10);
+	transition: all 0.3s ease;
+	border: 1px solid var(--primary);
+	&:hover {
+		background: var(--primary);
+		color: var(--white);
+	}
+}
+
+.btn--link-icon {
+	display: flex;
+	width: rem(52);
+	height: rem(52);
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	border-radius: rem(12);
+	border: 1px solid #e7e7e7;
+	background: #f8f8f8;
+	font-size: rem(24);
+	color: var(--primary);
+}

@@ -1,0 +1,1122 @@
+<!-- template top-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Title -->
+		<title>Jalapino</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/logo/fav.png" />
+		<!-- Apple touch icon -->
+		<link rel="apple-touch-icon" href="assets/images/logo/fav.png" />
+		<!-- swiper -->
+		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/animate.min.css" />
+		<link rel="stylesheet" href="assets/css/splitting.css" />
+		<link rel="stylesheet" href="assets/css/odometer.css" />
+
+		<!-- icon  -->
+		<script src="assets/js/iconify-icon.min.js"></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<!-- Main css -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body>
+		<!--==================== Preloader Start ====================-->
+		<div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<span class="loader"></span>
+				</div>
+			</div>
+		</div>
+		<!--==================== Preloader End ====================-->
+	</body>
+</html>
+
+
+<!-- header -->
+<header class="header" id="header">
+	<div class="container">
+		<div class="header-wrap">
+			<!-- logo  -->
+			<div class="logo">
+				<a href="index.html">
+					<img src="assets/images/logo/logo.png" alt="logo" />
+				</a>
+			</div>
+
+			<!-- menu  -->
+			<div class="menu">
+				<ul>
+					<li><a href="#banner">Home</a></li>
+					<li><a href="#about-me">About</a></li>
+					<li><a href="#recent-project">Work</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#faq">Faq</a></li>
+				</ul>
+			</div>
+
+			<!-- action  -->
+			<div class="action">
+				<a href="mailto:hello@gmail.com" class="btn--primary fw--600">Let’s talk</a>
+				<button
+					class="mobile-menu btn--outline"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#mobile-canvas"
+					aria-controls="mobile-canvas"
+				>
+					<iconify-icon icon="hugeicons:menu-square"></iconify-icon>
+				</button>
+
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-canvas">
+					<div class="offcanvas-header">
+						<div class="logo">
+							<a href="index.html">
+								<img src="assets/images/logo/logo.png" alt="logo" />
+							</a>
+						</div>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="mobile-menu-list">
+							<li><a href="#header">Home</a></li>
+							<li><a href="#about-me">About</a></li>
+							<li><a href="#recent-project">Work</a></li>
+							<li><a href="#service">Service</a></li>
+							<li><a href="#faq">Faq</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<!-- banner -->
+<section id="banner">
+	<div class="container">
+		<span class="circle-animate"></span>
+		<div class="row gy-5">
+			<div class="col-lg-9 banner-left">
+				<h1 class="banner-title mb--18 wow animate__animated animate__fadeInUp">
+					Transforming Ideas Into Stunning
+					<span class="text--primary">Web Experiences</span>
+				</h1>
+				<p
+					class="banner-subtitle mb--50 wow animate__animated animate__fadeInUp"
+					data-wow-delay="0.3s"
+				>
+					Transforming bold ideas into visually stunning and user-centric web
+					experiences that captivate audiences, drive engagement, and elevate
+					brands. We blend creativity and functionality to craft seamless
+					digital journeys that leave a lasting impact.
+				</p>
+				<div
+					class="d-flex gap-2 wow animate__animated animate__fadeInUp"
+					data-wow-delay="0.6s"
+				>
+					<a href="#about-me" class="btn--primary">I need a designer</a>
+					<a href="#recent-project" class="btn--outline">View Project</a>
+				</div>
+			</div>
+			<div class="col-lg-3 position-relative">
+				<div class="banner-img">
+					<div class="image-box">
+						<img src="assets/images/my-image/2.png" alt="..." />
+					</div>
+				</div>
+				<div class="years-exp">
+					<h1 class="years-exp-value">
+						<span class="odometer" data-count="15"></span><span>+</span>
+					</h1>
+					<p class="years-exp-desc">Years Experience</p>
+				</div>
+				<div class="lines-banner">
+					<img
+						class="animated-start"
+						src="assets/images/icon/lines3.svg"
+						alt=""
+					/>
+				</div>
+				<div class="start-icon">
+					<img
+						class="animated-start"
+						src="assets/images/icon/star.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- testimonials -->
+<section id="testimonials" class="py--100 section2">
+	<div class="container-fluid">
+		<div class="row gy-4 slider-wrap align-items-center">
+			<div class="col-md-5">
+				<div class="slider-content">
+					<h2 class="title mb--18 font--36 fw--400">What people are saying</h2>
+					<p class="subtitle font--16 fw--400">
+						Your compass to innovation and design excellence. From exploration
+						to execution, this dynamic framework fuels creativity and precision,
+						ensuring your product journey aligns seamlessly with user desires.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="testimonials">
+					<div class="swiper testiomnial2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="testimonials-card">
+									<div class="icon">
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+									</div>
+									<div class="content">
+										<p class="quote font-14">
+											Landify unleashes creativity on a new level. Dynamic
+											content generation in Figma? Yes, please!
+										</p>
+									</div>
+									<div class="author d-flex align-items-center gap-3">
+										<div class="avatar">
+											<img src="assets/images/testimonial/1.jpg" alt="" />
+										</div>
+										<div class="info">
+											<p class="name text--white mb-1 fw--700 font--18">
+												Creative Mind
+											</p>
+											<p class="position text--of-white font--14 fw--400">
+												@creativemind
+											</p>
+										</div>
+										<span class="gide-icon"
+											><iconify-icon icon="simple-icons:glide"></iconify-icon
+										></span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="testimonials-card">
+									<div class="icon">
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+									</div>
+									<div class="content">
+										<p class="quote font-14">
+											Landify unleashes creativity on a new level. Dynamic
+											content generation in Figma? Yes, please!
+										</p>
+									</div>
+									<div class="author d-flex align-items-center gap-3">
+										<div class="avatar">
+											<img src="assets/images/testimonial/1.jpg" alt="" />
+										</div>
+										<div class="info">
+											<p class="name text--white mb-1 fw--700 font--18">
+												Creative Mind
+											</p>
+											<p class="position text--of-white font--14 fw--400">
+												@creativemind
+											</p>
+										</div>
+										<span class="gide-icon"
+											><iconify-icon icon="simple-icons:glide"></iconify-icon
+										></span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="testimonials-card">
+									<div class="icon">
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+										<iconify-icon
+											icon="material-symbols:star-rounded"
+										></iconify-icon>
+									</div>
+									<div class="content">
+										<p class="quote font-14">
+											Landify unleashes creativity on a new level. Dynamic
+											content generation in Figma? Yes, please!
+										</p>
+									</div>
+									<div class="author d-flex align-items-center gap-3">
+										<div class="avatar">
+											<img src="assets/images/testimonial/1.jpg" alt="" />
+										</div>
+										<div class="info">
+											<p class="name text--white mb-1 fw--700 font--18">
+												Creative Mind
+											</p>
+											<p class="position text--of-white font--14 fw--400">
+												@creativemind
+											</p>
+										</div>
+										<span class="gide-icon"
+											><iconify-icon icon="simple-icons:glide"></iconify-icon
+										></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="catch-percent-card">
+					<span class="icon">
+						<iconify-icon icon="bi:emoji-smile-fill"></iconify-icon>
+					</span>
+					<h6 class="percent">86%</h6>
+					<p class="desc">
+						seems to be a typo or unfamiliar term. Did you mean "reviewed,"
+						"revived," or another specific word? Let me know, and I can clarify
+						its meaning!
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pt--100">
+			<div class="counter-box">
+				<div class="row gy-3">
+					<div class="col-6 col-md-3">
+						<div class="counting-wrap">
+							<h1 class="counter-value">
+								<span class="counter odometer" data-count="15"></span
+								><span>+</span>
+							</h1>
+							<p class="counter-desc">Years of Experience</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="counting-wrap">
+							<h1 class="counter-value">
+								<span class="counter odometer" data-count="155"></span
+								><span>+</span>
+							</h1>
+							<p class="counter-desc">Skilled Trainers</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="counting-wrap">
+							<h1 class="counter-value">
+								<span class="counter odometer" data-count="652"></span
+								><span>+</span>
+							</h1>
+							<p class="counter-desc">Calories Burn</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="counting-wrap">
+							<h1 class="counter-value">
+								<span class="counter odometer" data-count="731"></span
+								><span>+</span>
+							</h1>
+							<p class="counter-desc">Happy Member</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- recent project -->
+<section id="recent-project" class="py--100">
+	<span class="circle-animate"></span>
+
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-8">
+				<div class="section-header">
+					<h1 class="section-title">Recent Project</h1>
+					<p class="section-subtitle">
+						In a portfolio or professional context, a "Recent Project" typically
+						refers to a recent or notable project that showcases your skills,
+						accomplishments, and design approach.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center gy-4">
+			<div class="col-md-8 project-list section2">
+				<div class="product-card">
+					<div class="img wow animate__animated animate__fadeInUp">
+						<img src="assets/images/project/1.jpg" alt="" />
+					</div>
+					<div
+						class="content wow animate__animated animate__fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="left">
+							<p class="title">Digital Product Design Solution</p>
+							<p class="text">
+								With user-centered approach, the goals was to create .
+							</p>
+						</div>
+						<div class="right">
+							<p class="year">2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 project-list section2">
+				<div class="product-card">
+					<div class="img wow animate__animated animate__fadeInUp">
+						<img src="assets/images/project/2.jpg" alt="" />
+					</div>
+					<div
+						class="content wow animate__animated animate__fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="left">
+							<p class="title">Digital Product Design Solution</p>
+							<p class="text">
+								With user-centered approach, the goals was to create .
+							</p>
+						</div>
+						<div class="right">
+							<p class="year">2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 project-list section2">
+				<div class="product-card">
+					<div class="img wow animate__animated animate__fadeInUp">
+						<img src="assets/images/project/3.jpg" alt="" />
+					</div>
+					<div
+						class="content wow animate__animated animate__fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="left">
+							<p class="title">Digital Product Design Solution</p>
+							<p class="text">
+								With user-centered approach, the goals was to create .
+							</p>
+						</div>
+						<div class="right">
+							<p class="year">2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 project-list section2">
+				<div class="product-card">
+					<div class="img wow animate__animated animate__fadeInUp">
+						<img src="assets/images/project/4.jpg" alt="" />
+					</div>
+					<div
+						class="content wow animate__animated animate__fadeInUp"
+						data-wow-delay="0.1s"
+					>
+						<div class="left">
+							<p class="title">Digital Product Design Solution</p>
+							<p class="text">
+								With user-centered approach, the goals was to create .
+							</p>
+						</div>
+						<div class="right">
+							<p class="year">2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- about me -->
+<section id="about-me" class="py--100">
+	<div class="container">
+		<div class="row justify-content-center mb--50">
+			<div class="col-md-8">
+				<div class="section-header">
+					<h1 class="section-title">
+						MORE ABOUT <span class="marked">MECHEALE</span>
+					</h1>
+					<p class="section-subtitle">
+						In a portfolio or professional context, a "Recent Project" typically
+						refers to a recent or notable project that showcases your skills,
+						accomplishments, and design approach.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center gy-4">
+			<div class="col-md-10 my-profile-wrap sectionxy">
+				<div class="my-profile text-center mb--50">
+					<img src="assets/images/my-image/1.png" alt="" />
+				</div>
+				<div class="content">
+					<h6 class="details text-center">
+						I'M AN INNOVATIVE DESIGNER AND DIGITAL ARTIST IN TOKYO. MY PASSION
+						FOR MINIMALIST AESTHETICS, ELEGANT TYPOGRAPHY, AND INTUITIVE DESIGN
+						SHINES THROUGH IN MY WORK.
+					</h6>
+					<p class="text text-center">
+						I stay at the forefront of no-code tools, enabling me to bring my
+						creative visions to life. While my approach may be unconventional,
+						my commitment to the craft is unmatched. I excel at discovering
+						'unexpected solutions' and believe that with the right mindset,
+						design has the power to elevate the human experience.
+					</p>
+				</div>
+			</div>
+		</div>
+		<section
+			id="slider-company"
+			class="wow animate__animated animate__fadeInUp"
+		>
+			<div class="container">
+				<div class="swiper mySwiperSliderCompany">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="assets/images/company/1.png" alt="..." />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/images/company/2.png" alt="..." />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/images/company/3.png" alt="..." />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/images/company/4.png" alt="..." />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/images/company/5.png" alt="..." />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/images/company/3.png" alt="..." />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</section>
+
+
+<!-- services -->
+<section class="py--100" id="service">
+	<div class="container">
+		<div class="row justify-content-center mb-4">
+			<div class="col-md-8">
+				<div class="section-header">
+					<h1 class="section-title">My <span class="marked">Service</span></h1>
+					<p class="section-subtitle">
+						In a portfolio or professional context, a "Recent Project" typically
+						refers to a recent or notable project that showcases your skills,
+						accomplishments, and design approach.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row gy-3">
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:bottom-sheets"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Web Design</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:account-tree"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Wireframing &amp; prototyping</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:layers"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Interation design</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:layers"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Interation design</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:bottom-sheets"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Web Design</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="service-wrap">
+					<div class="service-icon">
+						<iconify-icon
+							class="icon"
+							icon="material-symbols:account-tree"
+						></iconify-icon>
+					</div>
+					<div class="service-content">
+						<h3 class="title">Wireframing &amp; prototyping</h3>
+						<p class="desc">
+							Gain deep insights into user needs and behaviors through
+							interviews, surveys, usability testing.
+						</p>
+					</div>
+
+					<div class="service-action">
+						<a class="link" href="#recent-project">
+							<span>View</span>
+							<iconify-icon
+								class="icon"
+								icon="lsicon:double-arrow-right-filled"
+							></iconify-icon>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- faq -->
+<section id="faq">
+	<span class="circle-animate"></span>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xxl-10">
+				<div class="row justify-content-center section-top">
+					<div class="col-lg-8 wow animate__animated animate__fadeInUp">
+						<div class="section-header">
+							<h1 class="section-title">
+								Your Questions and Answers
+								<img
+									class="bar-line"
+									src="assets/images/icon/bar-line.svg"
+									alt="..."
+								/>
+							</h1>
+							<p class="section-subtitle">
+								We specialize in delivering personalized digital solutions
+								tailored to your unique needs
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="faq-wrap">
+							<div class="accordion" id="accordionExample">
+								<div
+									class="accordion-item wow animate__animated animate__fadeInUp"
+									data-wow-delay="0.2s"
+								>
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#collapseOne"
+											aria-expanded="true"
+											aria-controls="collapseOne"
+										>
+											<span class="accordion-number">01</span>
+											<span
+												>What services do you offer as a UI/UX designer?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="collapseOne"
+										class="accordion-collapse collapse show"
+										data-bs-parent="#accordionExample"
+									>
+										<div class="accordion-body">
+											My design process involves understanding the client's
+											needs and goals, conducting user research, creating
+											wireframes and prototypes, and then iterating on designs
+											based on feedback.
+										</div>
+									</div>
+								</div>
+								<div
+									class="accordion-item wow animate__animated animate__fadeInUp"
+									data-wow-delay="0.4s"
+								>
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#collapseTwo"
+											aria-expanded="false"
+											aria-controls="collapseTwo"
+										>
+											<span class="accordion-number">02</span>
+											<span>What is your design process?</span>
+										</button>
+									</h2>
+									<div
+										id="collapseTwo"
+										class="accordion-collapse collapse"
+										data-bs-parent="#accordionExample"
+									>
+										<div class="accordion-body">
+											It is hidden by default, until the collapse plugin adds
+											the appropriate classes that we use to style each element.
+											These classes control the overall appearance, as well as
+											the showing and hiding via CSS transitions. You can modify
+											any of this with custom CSS or overriding our default
+											variables. It's also worth noting that just about any HTML
+											can go within the though the transition does limit
+											overflow.
+										</div>
+									</div>
+								</div>
+								<div
+									class="accordion-item wow animate__animated animate__fadeInUp"
+									data-wow-delay="0.4s"
+								>
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#collapseTheree"
+											aria-expanded="false"
+											aria-controls="collapseTwo"
+										>
+											<span class="accordion-number">03</span>
+											<span
+												>How long does it typically take to complete a
+												project?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="collapseTheree"
+										class="accordion-collapse collapse"
+										data-bs-parent="#accordionExample"
+									>
+										<div class="accordion-body">
+											It is hidden by default, until the collapse plugin adds
+											the appropriate classes that we use to style each element.
+											These classes control the overall appearance, as well as
+											the showing and hiding via CSS transitions. You can modify
+											any of this with custom CSS or overriding our default
+											variables. It's also worth noting that just about any HTML
+											can go within the though the transition does limit
+											overflow.
+										</div>
+									</div>
+								</div>
+								<div
+									class="accordion-item wow animate__animated animate__fadeInUp"
+									data-wow-delay="0.4s"
+								>
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#collapseFour"
+											aria-expanded="false"
+											aria-controls="collapseFour"
+										>
+											<span class="accordion-number">04</span>
+											<span
+												>How long does it typically take to complete a
+												project?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="collapseFour"
+										class="accordion-collapse collapse"
+										data-bs-parent="#accordionExample"
+									>
+										<div class="accordion-body">
+											It is hidden by default, until the collapse plugin adds
+											the appropriate classes that we use to style each element.
+											These classes control the overall appearance, as well as
+											the showing and hiding via CSS transitions. You can modify
+											any of this with custom CSS or overriding our default
+											variables. It's also worth noting that just about any HTML
+											can go within the though the transition does limit
+											overflow.
+										</div>
+									</div>
+								</div>
+								<div
+									class="accordion-item wow animate__animated animate__fadeInUp"
+									data-wow-delay="0.6s"
+								>
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#collapseFive"
+											aria-expanded="false"
+											aria-controls="collapseFive"
+										>
+											<span class="accordion-number">05</span>
+											<span>Can you design both websites and mobile apps?</span>
+										</button>
+									</h2>
+									<div
+										id="collapseFive"
+										class="accordion-collapse collapse"
+										data-bs-parent="#accordionExample"
+									>
+										<div class="accordion-body">
+											<strong>This is the third item's accordion body.</strong>
+											It is hidden by default, until the collapse plugin adds
+											the appropriate classes that we use to style each element.
+											These classes control the overall appearance, as well as
+											the showing and hiding via CSS transitions. You can modify
+											any of this with custom CSS or overriding our default
+											variables. It's also worth noting that just about any HTML
+											can go within the though the transition does limit
+											overflow.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row gy-4">
+			<div class="col-sm-4">
+				<div class="footer-side-1">
+					<a href="index.html" class="footer-logo d-inline-block">
+						<img src="assets/images/logo/logo.png" alt="" />
+					</a>
+					<div class="content">
+						<p class="text">
+							Your personal portfolio is more than just a collection of your
+							work—it's a reflection of your brand, personality, and unique
+							skills.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 col-sm-2">
+				<div class="footer-side-2">
+					<div class="title-box">
+						<h4 class="title">Useful Link</h4>
+					</div>
+					<div class="content">
+						<ul class="footer-link">
+							<li><a class="active" href="#about-me">About Us</a></li>
+							<li><a href="#service">Our Service</a></li>
+							<li><a href="#testimonials">Testimonial</a></li>
+							<li><a href="#recent-project">Our Project</a></li>
+							<li><a href="mailto:hello@gmail.com">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-8 col-sm-3">
+				<div class="footer-side-3">
+					<div class="title-box">
+						<h4 class="title">Contact Info</h4>
+					</div>
+					<div class="content">
+						<ul class="d-flex flex-column gap-4">
+							<li>
+								<div class="footer-contact-info">
+									<div class="icon">
+										<iconify-icon
+											class="icon"
+											icon="material-symbols:attach-email"
+										></iconify-icon>
+									</div>
+									<div class="details">
+										<a href="mailto:hello@gmail.com" class="title">hello@gmail.com</a>
+										<p class="subtext">Dhaka Hospital</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="footer-contact-info">
+									<div class="icon">
+										<iconify-icon
+											class="icon"
+											icon="material-symbols:call"
+										></iconify-icon>
+									</div>
+									<div class="details">
+										<a href="tel:0199999999" class="title">01999999999</a>
+										<p class="subtext">Dhaka Hospital Number</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="footer-contact-info">
+									<div class="icon">
+										<iconify-icon
+											class="icon"
+											icon="material-symbols:location-on"
+										></iconify-icon>
+									</div>
+									<div class="details">
+										<a href="https://maps.app.goo.gl/F8VEKpXMmxoVQoCEA" class="title">Themeforest, Envato HQ</a>
+										<p class="subtext">Dhaka Hospital</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="footer-side-4">
+					<div class="title-box mb-4">
+						<h4 class="title">Agency</h4>
+						<p class="subtext">
+							Feel free to reach out if you want to collaborate with us, or
+							simply chat.
+						</p>
+					</div>
+					<div class="content">
+						<form action="">
+							<div class="email-subscribe">
+								<input type="email" placeholder="Enter your mail" />
+								<button type="submit">
+									<iconify-icon icon="solar:arrow-right-outline"></iconify-icon>
+								</button>
+							</div>
+						</form>
+						<ul class="footer-social">
+							<li>
+								<a href="https://www.google.com">
+									<iconify-icon icon="mdi:google"></iconify-icon
+								></a>
+							</li>
+							<li>
+								<a href="https://www.slack.com">
+									<iconify-icon icon="mdi:slack"></iconify-icon>
+								</a>
+							</li>
+							<li>
+								<a href="https:www.facebook.com">
+									<iconify-icon icon="mdi:facebook"></iconify-icon>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.apple.com">
+									<iconify-icon
+										icon="mdi:apple"
+										width="24"
+										height="24"
+									></iconify-icon>
+								</a>
+							</li>
+						</ul>
+
+						<p class="copyright">
+							Copyright © creative-hunk | All Right Reserved
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<!-- template bottom -->
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- swiper Js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/splitting.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/scroll-trigger.min.js"></script>
+<script src="assets/js/scroll-to-plugin.min.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

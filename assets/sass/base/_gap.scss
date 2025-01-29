@@ -1,0 +1,31 @@
+.mb--18 {
+	margin-bottom: rem(18);
+
+	@include responsive(md) {
+		margin-bottom: rem(14);
+	}
+}
+.mb--50 {
+	margin-bottom: rem(50);
+
+	@include responsive(md) {
+		margin-bottom: rem(30);
+	}
+}
+
+.py--100 {
+	padding-top: rem(100);
+	padding-bottom: rem(100);
+
+	@include responsive(md) {
+		padding-top: rem(70);
+		padding-bottom: rem(70);
+	}
+}
+.pt--100 {
+	padding-top: rem(100);
+
+	@include responsive(md) {
+		padding-top: rem(70);
+	}
+}

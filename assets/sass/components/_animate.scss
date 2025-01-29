@@ -1,0 +1,68 @@
+.circle-animate {
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+	border-radius: 50%; /* Make the main circle fully circular */
+	background: rgba(18, 130, 236, 0.1);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%; /* Center horizontally */
+		left: 50%; /* Center vertically */
+		width: 22px;
+		height: 22px;
+		background: rgba(38, 59, 157, 0.5);
+		border-radius: 50%; /* Fully circular */
+		transform: translate(-50%, -50%) rotate(0deg) translateX(20px); /* Rotate around the main circle's edge */
+		transform-origin: center center; /* Rotate around the center of the main circle */
+		animation: animateCircle 10s linear infinite;
+	}
+
+	@keyframes animateCircle {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg) translateX(20px);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg) translateX(20px);
+		}
+	}
+}
+
+.animated-start {
+	opacity: 0;
+	transform: translateY(20px); /* Initially position it below the view */
+	animation: fadeUpStart 5s ease-out infinite,
+		fadeOutStart 5s ease-in infinite 4s; /* Fade up and fade out infinitely */
+}
+
+/* Fade up effect */
+@keyframes fadeUpStart {
+	0% {
+		opacity: 0;
+		transform: translateY(20px); /* Start off below the screen */
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(0); /* End at the normal position */
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(20px); /* Move it down as it fades out */
+	}
+}
+
+/* Fade out effect */
+@keyframes fadeOutStart {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(20px); /* Move it down as it fades out */
+	}
+}
