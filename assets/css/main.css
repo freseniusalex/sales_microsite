@@ -762,10 +762,11 @@ ul {
 }
 
 .counting-wrap .counter-value {
-  color: #305dff;
+  color: var(--primary);
   text-align: center;
   font-size: 3.875rem;
   margin-bottom: 1.125rem;
+  font-weight: 700;
 }
 
 .counting-wrap .counter-desc {
