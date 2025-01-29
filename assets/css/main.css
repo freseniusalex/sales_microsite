@@ -1433,6 +1433,44 @@ ul {
 }
 
 @media (max-width: 768px) {
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    padding: 5rem 0;
+    margin: 4rem 0;
+    border-radius: 20px;
+}
+
+.final-cta {
+    color: white;
+    padding: 2rem;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.final-cta .btn--primary {
+    background: white;
+    color: var(--primary);
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.final-cta .btn--primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
   text-align: center;
   }
 }
