@@ -358,10 +358,11 @@ ul {
 
 #banner .banner-subtitle {
     color: var(--text-secondary);
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Increased font size */
     font-weight: 500;
     line-height: 180%;
  /* 28.8px */
+    font-family: 'Jost', sans-serif; /* Added Jost font */
 }
 
 @media (max-width: 576px) {
@@ -683,6 +684,8 @@ ul {
 
 .testimonials-card .content .quote {
   color: var(--text-of-white);
+  font-size: 1.2rem; /* Increased font size */
+  font-family: 'Jost', sans-serif; /* Added Jost font */
 }
 
 .testimonials-card .author .avatar img {
@@ -759,6 +762,8 @@ ul {
   font-size: 0.875rem;
   line-height: 140%; /* 19.6px */
   font-weight: 300;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .counting-wrap .counter-value {
@@ -774,6 +779,8 @@ ul {
   text-align: center;
   font-size: 1.125rem;
   font-weight: 300;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .counter-box {
@@ -810,18 +817,24 @@ ul {
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.625rem;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .product-card .content .text {
   color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .product-card .content .year {
   color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 600;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 #about-me {
@@ -905,12 +918,16 @@ ul {
   font-size: 1.375rem;
   margin-bottom: 1.375rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .my-profile-wrap .text {
   color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 #slider-company {
@@ -982,12 +999,15 @@ ul {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
-.service-wrap .service-content .desc {
-  color: var(--text-secondary);
+.service-wrap .service-content .desc {  color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .service-wrap .service-action .link {
@@ -1102,6 +1122,8 @@ ul {
   color: #000;
   font-size: 1.375rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .accordion .accordion-item .accordion-button .accordion-number {
@@ -1226,6 +1248,8 @@ ul {
   font-size: 1rem;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .title-box .title {
@@ -1233,6 +1257,8 @@ ul {
   font-size: 1.375rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .title-box .subtext {
@@ -1240,6 +1266,8 @@ ul {
   font-size: 1rem;
   font-weight: 500;
   line-height: 26px; /* 162.5% */
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .footer-link {
@@ -1254,6 +1282,8 @@ ul {
   font-weight: 400;
   position: relative;
   transition: all 0.3s ease;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .footer-link li a::before {
@@ -1297,6 +1327,8 @@ ul {
   line-height: 26px; /* 162.5% */
   margin-bottom: 4px;
   transition: all 0.3s ease;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .footer-contact-info .details .subtext {
@@ -1304,6 +1336,8 @@ ul {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .footer-contact-info:hover .icon {
@@ -1331,6 +1365,8 @@ ul {
   font-weight: 400;
   padding: 0.9375rem 1.25rem;
   padding-right: 3.75rem;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 .email-subscribe button {
@@ -1387,6 +1423,8 @@ ul {
   color: var(--text-of-white);
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 @media (max-width: 768px) {
@@ -1434,6 +1472,8 @@ ul {
   font-size: 0.875rem;
   font-weight: 400;
   transition: 0.3s ease;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 #header .header-wrap .menu ul li a.active {
@@ -1490,6 +1530,8 @@ ul {
   font-size: 0.875rem;
   font-weight: 400;
   transition: 0.3s ease;
+  font-family: 'Jost', sans-serif; /* Added Jost font */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 #header .header-wrap .mobile-menu-list a.active {
@@ -1533,6 +1575,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: 'Jost', sans-serif; /* Added Jost font */
+    font-size: 1.2rem; /* Increased font size */
 }
 
 .requirement-list {
@@ -1546,6 +1590,8 @@ ul {
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-secondary);
+    font-family: 'Jost', sans-serif; /* Added Jost font */
+    font-size: 1.2rem; /* Increased font size */
 }
 
 .requirement-list li::before {
@@ -1567,6 +1613,8 @@ ul {
 .apply-section h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-family: 'Jost', sans-serif; /* Added Jost font */
+    font-size: 1.2rem; /* Increased font size */
 }
 
 .apply-section .btn--primary {
@@ -1581,4 +1629,12 @@ ul {
 .apply-section .btn--primary:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Hohe-Mitarbeiterzufriedenheit {
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.Fresenius-Umwelttechnik {
+    color: var(--primary); /* Changed color to primary */
 }
