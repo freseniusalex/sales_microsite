@@ -684,9 +684,8 @@ ul {
 
 .testimonials-card .content .quote {
   color: var(--text-of-white);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.4;
 }
 
 .testimonials-card .author .avatar img {
@@ -1591,8 +1590,7 @@ ul {
     position: relative;
     color: var(--text-secondary);
     font-family: 'Jost', sans-serif;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 1.4rem;
 }
 
 .requirement-list li::before {
