@@ -1397,9 +1397,10 @@ ul {
 }
 
 .diversity-badge {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 2rem;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem auto;
+    display: block;
 }
 
 .diversity-badge img {
@@ -1785,6 +1786,7 @@ ul {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    font-family: 'Jost', sans-serif;
 }
 
 .btn-gradient-primary {
