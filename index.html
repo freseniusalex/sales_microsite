@@ -1113,6 +1113,68 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
       document.querySelector('.cookie-banner').classList.remove('show');
       document.querySelector('.cookie-settings-mini').style.display = 'block';
       enableTracking();
+      startTextAnimation();
+    }
+
+    function startTextAnimation() {
+      const headline = document.querySelector('.banner-subtitle').innerHTML;
+      const words = headline.split('<br>');
+      const container = document.querySelector('.banner-subtitle');
+      container.innerHTML = '';
+      
+      words.forEach((word, i) => {
+        const span = document.createElement('span');
+        span.innerHTML = word;
+        span.style.display = 'block';
+        span.className = 'animate-word';
+        container.appendChild(span);
+      });
+
+      const tl = gsap.timeline();
+      
+      gsap.utils.toArray('.animate-word').forEach((word, i) => {
+        tl.to(word, {
+          backgroundColor: 'var(--primary)',
+          color: 'white',
+          duration: 0.5,
+          ease: 'power2.inOut'
+        })
+        .to(word, {
+          backgroundColor: 'transparent',
+          color: 'inherit',
+          duration: 0.5,
+          ease: 'power2.inOut'
+        }, '>')
+      });
+
+      const title = document.querySelector('.banner-title .text--primary');
+      tl.to(title, {
+        backgroundColor: 'var(--primary)',
+        color: 'white',
+        duration: 0.5,
+        ease: 'power2.inOut'
+      })
+      .to(title, {
+        backgroundColor: 'transparent',
+        color: 'var(--primary)',
+        duration: 0.5,
+        ease: 'power2.inOut'
+      });
+
+      const button = document.querySelector('.banner-left .btn-gradient-primary');
+      tl.to(button, {
+        backgroundColor: 'var(--primary)',
+        scale: 1.1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        repeat: 5,
+        yoyo: true
+      })
+      .to(button, {
+        backgroundColor: '',
+        scale: 1,
+        duration: 0.5
+      });
     }
 
     function saveCookieSettings() {

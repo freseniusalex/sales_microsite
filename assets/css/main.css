@@ -2107,3 +2107,18 @@ input:checked + .toggle-slider {
 input:checked + .toggle-slider:before {
     transform: translateX(26px);
 }
+.animate-word {
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.banner-title .text--primary {
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient-primary {
+    transition: all 0.3s ease;
+}
