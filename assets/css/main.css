@@ -1957,6 +1957,36 @@ ul {
     border-top-color: rgba(0, 0, 0, 0.8);
     margin-bottom: -0.5rem;
 }
+/* Cookie Settings Mini Overlay */
+.cookie-settings-mini {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    display: none;
+}
+
+.cookie-settings-mini button {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cookie-settings-mini button:hover {
+    background: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;

@@ -1039,6 +1039,14 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     ws.onerror = () => { };
   </script>
   
+  <!-- Cookie Settings Mini Overlay -->
+  <div class="cookie-settings-mini">
+    <button onclick="showCookieSettings()">
+      <iconify-icon icon="material-symbols:settings"></iconify-icon>
+      Cookie-Einstellungen
+    </button>
+  </div>
+  
   <!-- Cookie Banner -->
   <div class="cookie-banner">
     <div class="cookie-modal">
@@ -1101,6 +1109,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     function acceptAllCookies() {
       setCookie('cookie-consent', 'all', 365);
       document.querySelector('.cookie-banner').classList.remove('show');
+      document.querySelector('.cookie-settings-mini').style.display = 'block';
       enableTracking();
     }
 
