@@ -1115,6 +1115,23 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
       enableTracking();
     }
 
+    // Check cookie consent on page load
+    window.addEventListener('load', function() {
+      const consent = getCookie('cookie-consent');
+      if (!consent) {
+        document.querySelector('.cookie-banner').classList.add('show');
+        document.querySelector('.cookie-settings-mini').style.display = 'none';
+        disableTracking();
+      } else {
+        document.querySelector('.cookie-settings-mini').style.display = 'block';
+        if (consent === 'all') {
+          enableTracking();
+        } else {
+          disableTracking();
+        }
+      }
+    });
+
     function saveCookieSettings() {
       const analyticsEnabled = document.getElementById('analytics-toggle').checked;
       setCookie('cookie-consent', analyticsEnabled ? 'analytics' : 'necessary', 365);
