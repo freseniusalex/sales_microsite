@@ -1041,29 +1041,31 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
   
   <!-- Cookie Banner -->
   <div class="cookie-banner">
-    <div class="cookie-content">
-      <div class="cookie-text">
-        <h4>Wir respektieren Ihre Privatsphäre</h4>
-        <p>Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern und unsere Dienste zu optimieren. 
-           Einige sind notwendig, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern.</p>
-        <a href="https://freseniusinstruments.com/datenschutz/" target="_blank">Datenschutzerklärung</a> | 
-        <a href="https://freseniusinstruments.com/impressum/" target="_blank">Impressum</a>
-      </div>
-      <div class="cookie-buttons">
-        <button class="btn-gradient-primary" onclick="showCookieSettings()">Einstellungen</button>
-        <button class="btn-gradient-primary" onclick="acceptAllCookies()">Alle akzeptieren</button>
-      </div>
-    </div>
-    <div class="cookie-settings-panel">
-      <div class="cookie-toggle">
-        <div>
-          <h5>Analytics Tracking</h5>
-          <p>Hilft uns zu verstehen, wie Besucher mit der Website interagieren</p>
+    <div class="cookie-modal">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h4>Wir respektieren Ihre Privatsphäre</h4>
+          <p>Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern und unsere Dienste zu optimieren. 
+             Einige sind notwendig, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern.</p>
+          <a href="https://freseniusinstruments.com/datenschutz/" target="_blank">Datenschutzerklärung</a> | 
+          <a href="https://freseniusinstruments.com/impressum/" target="_blank">Impressum</a>
         </div>
-        <label class="toggle-switch">
-          <input type="checkbox" id="analytics-toggle" checked>
-          <span class="toggle-slider"></span>
-        </label>
+        <div class="cookie-settings-panel" style="display: none;">
+          <div class="cookie-toggle">
+            <div>
+              <h5>Analytics Tracking</h5>
+              <p>Hilft uns zu verstehen, wie Besucher mit der Website interagieren</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="analytics-toggle" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-buttons">
+          <button class="btn-gradient-primary" onclick="showCookieSettings()">Einstellungen</button>
+          <button class="btn-gradient-primary" onclick="acceptAllCookies()">Alle akzeptieren</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1092,7 +1094,8 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     }
 
     function showCookieSettings() {
-      document.querySelector('.cookie-settings-panel').classList.toggle('show');
+      const panel = document.querySelector('.cookie-settings-panel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
     }
 
     function acceptAllCookies() {
