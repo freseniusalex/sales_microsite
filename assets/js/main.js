@@ -317,3 +317,49 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (section) observer.observe(section);
 	});
 });
+
+function acceptAllCookies() {
+      setCookie('cookie-consent', 'all', 365);
+      document.querySelector('.cookie-banner').classList.remove('show');
+      document.querySelector('.cookie-settings-mini').style.display = 'block';
+      enableTracking();
+
+      // Start animation sequence
+      const words = [
+        {el: document.getElementById('word1'), duration: 0.3},
+        {el: document.getElementById('word2'), duration: 0.2},
+        {el: document.getElementById('word3'), duration: 0.4},
+        {el: document.getElementById('word4'), duration: 0.2},
+        {el: document.getElementById('word5'), duration: 1.5}
+      ];
+
+      let delay = 0;
+      words.forEach((word, index) => {
+        setTimeout(() => {
+          // Activate current word
+          word.el.classList.add('active');
+
+          // Deactivate previous word
+          if (index > 0) {
+            words[index - 1].el.classList.remove('active');
+          }
+
+          // If it's the last word
+          if (index === words.length - 1) {
+            // Start button animation after last word
+            setTimeout(() => {
+              const button = document.querySelector('.btn-gradient-primary');
+              button.classList.add('pulsing');
+
+              // Remove all highlights and pulsing after 3 seconds
+              setTimeout(() => {
+                words.forEach(w => w.el.classList.remove('active'));
+                button.classList.remove('pulsing');
+              }, 3000);
+            }, word.duration * 1000);
+          }
+        }, delay * 1000);
+
+        delay += word.duration;
+      });
+    }
