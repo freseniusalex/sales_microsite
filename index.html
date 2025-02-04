@@ -1102,8 +1102,10 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     }
 
     function showCookieSettings() {
+      const banner = document.querySelector('.cookie-banner');
+      banner.classList.add('show');
       const panel = document.querySelector('.cookie-settings-panel');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+      panel.style.display = 'block';
     }
 
     function acceptAllCookies() {
