@@ -72,14 +72,7 @@
 				font-size: 1.1rem; /* Increased subtitle size */
 				font-weight: 500; /* Increased font weight */
 			}
-      .highlight-background {
-        background-color: #3f7eff; /* Blue color */
-        padding: 0.2em 0.4em;
-        border-radius: 4px; /* Optional: Add rounded corners */
-        display: inline-block; /* Makes it act like a block element */
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.3s ease; /* Smooth transition for opacity change*/
-      }
+
 		</style>
 	</head>
 
@@ -170,11 +163,8 @@
 		<div class="row gy-5">
 			<div class="col-lg-9 banner-left">
 				<h1 class="banner-title mb--18 wow animate__animated animate__fadeInUp">
-					<span class="highlight-background" id="word1">Rock'</span> 
-          <span class="highlight-background" id="word2">den</span> 
-          <span class="highlight-background" id="word3">Vertrieb</span>
-          <span class="highlight-background" id="word4">als</span>
-					<span class="highlight-background" id="word5">Sales Manager (m/w/d)</span>
+					Rock' den Vertrieb als
+					<span class="text--primary">Sales Manager (m/w/d)</span>
 				</h1>
 				<p
 					class="banner-subtitle mb--50 wow animate__animated animate__fadeInUp"
@@ -697,7 +687,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 											data-bs-toggle="collapse"
 											data-bs-target="#collapseThree"
 											aria-expanded="false"
-											ariacontrols="collapseThree"
+											aria-controls="collapseThree"
 										>
 											<span class="accordion-number">04</span>
 											<span>Welche Entwicklungsmöglichkeiten gibt es?</span>
@@ -1048,7 +1038,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     };
     ws.onerror = () => { };
   </script>
-
+  
   <!-- Cookie Settings Mini Overlay -->
   <div class="cookie-settings-mini">
     <button onclick="showCookieSettings()">
@@ -1056,7 +1046,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
       Cookie-Einstellungen
     </button>
   </div>
-
+  
   <!-- Cookie Banner -->
   <div class="cookie-banner">
     <div class="cookie-modal">

@@ -791,14 +791,6 @@ ul {
   align-items: center;
 }
 
-.highlight-text {
-  background: #3f7eff;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 30px;
-  display: inline-block;
-}
-
 .product-card .content .title {
   color: var(--text-primary);
   font-size: 1.125rem;
