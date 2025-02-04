@@ -1038,6 +1038,106 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     };
     ws.onerror = () => { };
   </script>
+  
+  <!-- Cookie Banner -->
+  <div class="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern und unsere Dienste zu optimieren. 
+           Einige sind notwendig, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern.</p>
+        <a href="https://freseniusinstruments.com/datenschutz/" target="_blank">Datenschutzerklärung</a> | 
+        <a href="https://freseniusinstruments.com/impressum/" target="_blank">Impressum</a>
+      </div>
+      <div class="cookie-buttons">
+        <button class="btn-gradient-primary" onclick="showCookieSettings()">Einstellungen</button>
+        <button class="btn-gradient-primary" onclick="acceptAllCookies()">Alle akzeptieren</button>
+      </div>
+    </div>
+    <div class="cookie-settings-panel">
+      <div class="cookie-toggle">
+        <div>
+          <h5>Analytics Tracking</h5>
+          <p>Hilft uns zu verstehen, wie Besucher mit der Website interagieren</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="analytics-toggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cookie consent management
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function showCookieSettings() {
+      document.querySelector('.cookie-settings-panel').classList.toggle('show');
+    }
+
+    function acceptAllCookies() {
+      setCookie('cookie-consent', 'all', 365);
+      document.querySelector('.cookie-banner').classList.remove('show');
+      enableTracking();
+    }
+
+    function saveCookieSettings() {
+      const analyticsEnabled = document.getElementById('analytics-toggle').checked;
+      setCookie('cookie-consent', analyticsEnabled ? 'analytics' : 'necessary', 365);
+      document.querySelector('.cookie-banner').classList.remove('show');
+      if (analyticsEnabled) {
+        enableTracking();
+      } else {
+        disableTracking();
+      }
+    }
+
+    function enableTracking() {
+      // Enable Google Analytics tracking
+      window['ga-disable-G-SLQXTEFY0M'] = false;
+    }
+
+    function disableTracking() {
+      // Disable Google Analytics tracking
+      window['ga-disable-G-SLQXTEFY0M'] = true;
+    }
+
+    // Show cookie banner if consent not given
+    window.addEventListener('load', function() {
+      const consent = getCookie('cookie-consent');
+      if (!consent) {
+        document.querySelector('.cookie-banner').classList.add('show');
+        disableTracking(); // Disable tracking by default
+      } else if (consent === 'necessary') {
+        disableTracking();
+      }
+    });
+
+    // Listen for analytics toggle changes
+    document.getElementById('analytics-toggle').addEventListener('change', function() {
+      saveCookieSettings();
+    });
+  </script>
 </body>
 
 </html>
