@@ -1042,18 +1042,26 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
   <!-- Cookie Banner -->
   <div class="cookie-banner">
     <div class="cookie-content">
-      <div class="cookie-text">
+      <div class="cookie-text text-center">
         <h4>Wir respektieren Ihre Privatsphäre</h4>
         <p>Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern und unsere Dienste zu optimieren. 
            Einige sind notwendig, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern.</p>
-        <a href="https://freseniusinstruments.com/datenschutz/" target="_blank">Datenschutzerklärung</a> | 
-        <a href="https://freseniusinstruments.com/impressum/" target="_blank">Impressum</a>
+        <div class="mt-2 mb-4">
+          <a href="https://freseniusinstruments.com/datenschutz/" target="_blank">Datenschutzerklärung</a> | 
+          <a href="https://freseniusinstruments.com/impressum/" target="_blank">Impressum</a>
+        </div>
       </div>
-      <div class="cookie-buttons">
+      <div class="cookie-buttons d-flex justify-content-center gap-3">
         <button class="btn-gradient-primary" onclick="showCookieSettings()">Einstellungen</button>
         <button class="btn-gradient-primary" onclick="acceptAllCookies()">Alle akzeptieren</button>
       </div>
     </div>
+  </div>
+
+  <!-- Cookie Mini Card -->
+  <div class="cookie-mini-card" onclick="showCookieSettings()">
+    <i class="fas fa-cookie-bite"></i> Cookie-Einstellungen
+  </div>
     <div class="cookie-settings-panel">
       <div class="cookie-toggle">
         <div>
@@ -1097,7 +1105,8 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 
     function acceptAllCookies() {
       setCookie('cookie-consent', 'all', 365);
-      document.querySelector('.cookie-banner').classList.remove('show');
+      document.querySelector('.cookie-banner').style.display = 'none';
+      document.querySelector('.cookie-mini-card').style.display = 'block';
       enableTracking();
     }
 
