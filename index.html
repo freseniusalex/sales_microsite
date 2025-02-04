@@ -935,7 +935,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 										></iconify-icon>
 									</div>
 									<div class="details">
-										<a href="mailto:personal@fresenius-ut.com" class="title">personal@fresenius-ut.com</a>
+										<a href="mailto:personal@fresenius-ut.com" class="title" onclick="return gtagSendEmailEvent('mailto:personal@fresenius-ut.com')">personal@fresenius-ut.com</a>
 										<p class="subtext">Personalabteilung</p>
 									</div>
 								</div>
@@ -949,7 +949,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 										></iconify-icon>
 									</div>
 									<div class="details">
-										<a href="tel:+4923669396110" class="title">+49 (0)2366 93961-10</a>
+										<a href="tel:+4923669396110" class="title" onclick="return gtagSendCallEvent('tel:+4923669396110')">+49 (0)2366 93961-10</a>
 										<p class="subtext">Zentrale</p>
 									</div>
 								</div>
@@ -1029,6 +1029,33 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 <script src="assets/js/main.js"></script>
 
 <script>
+    // Google Analytics Event Tracking Functions
+    function gtagSendCallEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'click_to_call', {
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
+      return false;
+    }
+
+    function gtagSendEmailEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'click_to_email', {
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
+      return false;
+    }
+
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     const ws = new WebSocket(`${protocol}//${window.location.host}`);
     ws.onmessage = msg => {
