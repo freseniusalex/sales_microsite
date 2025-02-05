@@ -280,10 +280,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 	const sections = [
-		'banner',
-		'testimonials',
-		'recent-project',
-		'about-me',
+		'home',
+		'about-us',
+		'job-requirements',
+		'values',
 		'innovation',
 		'faq'
 	]; // Specific IDs for your sections
