@@ -324,7 +324,7 @@ ul {
 #home .banner-title {
     color: var(--text-primary);
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 1000;
     line-height: 120%;
  /* 96px */
 }
