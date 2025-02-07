@@ -1800,12 +1800,15 @@ ul {
   align-items: center;
   justify-content: center;
   min-height: 48px;
+  font-size: 1rem;
 }
 
 @media (max-width: 576px) {
   .btn-gradient-primary {
     padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
