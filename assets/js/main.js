@@ -4,6 +4,13 @@
 	'use strict';
 
 	$(document).ready(function () {
+    // Initialize cookie banner
+    if (!getCookie('cookie-consent')) {
+        $('.cookie-banner').addClass('show');
+        $('.cookie-settings-mini').hide();
+    } else {
+        $('.cookie-settings-mini').show();
+    }
 		// odometer init
 		if ($('.odometer').length) {
 			var odo = $('.odometer');
@@ -98,7 +105,29 @@
 			},
 		});
 
-		function setupVideoPlayer(videoId, playButtonId, options = {}) {
+		// Cookie functions
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function setupVideoPlayer(videoId, playButtonId, options = {}) {
 			const video = document.getElementById(videoId);
 			const playButton = document.getElementById(playButtonId);
 
