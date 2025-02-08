@@ -74,7 +74,14 @@
 				font-size: 1.1rem; /* Increased subtitle size */
 				font-weight: 500; /* Increased font weight */
 			}
-
+			@media (max-width: 576px) {
+				.banner-title {
+					font-size: 2.75rem;
+				}
+				.banner-subtitle {
+					font-size: 1rem;
+				}
+			}
 		</style>
 	</head>
 
@@ -452,12 +459,29 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
             </div>
         </div>
     </div>
-    <div class="scroll-marker-mobile d-block d-sm-none text-center mt-4 mb-5">
-        <a href="#faq" class="scroll-link">
-            <div class="scroll-text mb-2">Fragen über den Job? Zum FAQ springen</div>
-            <iconify-icon icon="material-symbols:keyboard-double-arrow-down" class="scroll-icon"></iconify-icon>
-        </a>
-    </div>
+
+<div class="scroll-marker-mobile d-block d-sm-none text-center mt-4 mb-5">
+    <a href="#faq" class="scroll-link">
+        <div class="scroll-text mb-2">Fragen über den Job? Zum FAQ springen</div>
+        <iconify-icon icon="material-symbols:keyboard-double-arrow-down" class="scroll-icon"></iconify-icon>
+    </a>
+</div>
+
+<!-- Call to Action Section -->
+    <section class="cta-gradient-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="gradient-cta text-center wow animate__animated animate__fadeIn">
+                        <h2 class="mb-4">Bereit durchzustarten?</h2>
+                        <p class="mb-5">Schick uns deine Bewerbung mit Eintrittstermin und Gehaltsvorstellung!</p>
+                        <a href="mailto:personal@fresenius-ut.com" class="btn-gradient-primary" style="background: white; color: var(--primary);" onclick="gtag('event', 'sales_campaign_click_bewerbung'); return true;" data-gtm-category="Bewerbung" data-gtm-action="click" data-gtm-label="Jetzt Bewerbung raushauen!">Jetzt Bewerbung raushauen!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </section>
 
 
@@ -641,7 +665,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 								</div>
 								<div
 									class="accordion-item wow animate__animated animate__fadeInUp"
-									data-wow-delay="0.25s"
+									data-wow-delay="0.25s">
 								>
 									<h2 class="accordion-header">
 										<button
@@ -966,7 +990,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 										></iconify-icon>
 									</div>
 									<div class="details">
-										<a href="tel:+4923669396110" class="title" onclick="return gtagSendCallEvent('tel:+4923669396110')">+49 (0)2366 93961-10</a>
+										<a href="tel:+4923669396110" class="title" onclick="return gtagSendCallEvent('tel:+4923669396110')">+49 (0)2366 93961-110</a>
 										<p class="subtext">Zentrale</p>
 									</div>
 								</div>
