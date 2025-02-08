@@ -335,21 +335,13 @@ ul {
     }
 }
 
-@media (max-width: 576px) {
-    #home .banner-title {
-        font-size: 2.75rem;
-    }
-    #home .banner-subtitle {
-        font-size: 1rem;
-    }
-}
-
 #home .banner-subtitle {
     color: var(--text-secondary);
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Increased font size */
     font-weight: 500;
     line-height: 180%;
-    font-family: 'Jost', sans-serif;
+ /* 28.8px */
+    font-family: 'Jost', sans-serif; /* Added Jost font */
 }
 
 @media (max-width: 576px) {
@@ -1839,8 +1831,7 @@ ul {
 
 /* Scroll Marker Styles */
 .scroll-marker-mobile {
-    margin: 3rem 0;
-    text-align: center;
+    margin: 2rem 0;
 }
 
 .scroll-link {
