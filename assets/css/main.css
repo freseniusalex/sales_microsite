@@ -2219,3 +2219,13 @@ input:checked + .toggle-slider {
 input:checked + .toggle-slider:before {
     transform: translateX(26px);
 }
+
+.toggle-slider.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input:disabled + .toggle-slider {
+    background-color: #999;
+    cursor: not-allowed;
+}
