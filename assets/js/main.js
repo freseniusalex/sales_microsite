@@ -4,7 +4,7 @@
 	'use strict';
 
 	$(document).ready(function () {
-    // Initialize cookie banner
+    // Initialize cookie banner and button handlers
     setTimeout(function() {
         if (!getCookie('cookie-consent')) {
             $('.cookie-banner').addClass('show').css({'display': 'flex', 'opacity': '1'});
@@ -13,6 +13,21 @@
             $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
             $('.cookie-settings-mini').css('display', 'block');
         }
+
+        // Handle accept all cookies button
+        $('.cookie-buttons .btn-gradient-primary').last().on('click', function() {
+            acceptAllCookies();
+        });
+
+        // Handle settings button
+        $('.cookie-buttons .btn-gradient-primary').first().on('click', function() {
+            showCookieSettings();
+        });
+
+        // Handle mini settings button
+        $('.cookie-settings-mini button').on('click', function() {
+            showCookieSettings();
+        });
     }, 1000);
 		// odometer init
 		if ($('.odometer').length) {
