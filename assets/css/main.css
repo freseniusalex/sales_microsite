@@ -1994,16 +1994,22 @@ ul {
 }
 
 @media (max-width: 576px) {
+    .row.mt-5 {
+        display: flex;
+        gap: 10px;
+        margin: 2rem -10px 0;
+    }
+    
     .innovation-image {
-        width: 32%;
-        display: inline-block;
-        margin-right: 1%;
+        flex: 1;
+        margin: 0;
+        padding: 0 5px;
     }
-    .innovation-image:last-child {
-        margin-right: 0;
-    }
+    
     .innovation-image img {
-        height: 150px;
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
     }
 }
 .page-info {
