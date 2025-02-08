@@ -1831,7 +1831,9 @@ ul {
 
 /* Scroll Marker Styles */
 .scroll-marker-mobile {
-    margin: 2rem 0;
+    margin: 3rem 0;
+    text-align: center;
+    width: 100%;
 }
 
 .scroll-link {
@@ -1850,6 +1852,15 @@ ul {
     font-size: 2rem;
     animation: bounceArrow 2s infinite;
     display: block;
+}
+
+@media (max-width: 576px) {
+    .banner-title {
+        font-size: 2.75rem !important;
+    }
+    .banner-subtitle {
+        font-size: 1rem !important;
+    }
 }
 
 @keyframes bounceArrow {
