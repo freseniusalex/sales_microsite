@@ -1598,13 +1598,13 @@ ul {
   padding: 0.8125rem 1.625rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 576px) {
   #header .header-wrap .action > .btn-gradient-primary {
     display: none;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 577px) {
   #header .header-wrap .mobile-menu-list .btn-gradient-primary {
     display: none;
   }
