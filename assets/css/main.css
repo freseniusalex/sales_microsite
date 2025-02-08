@@ -1792,13 +1792,23 @@ ul {
 .btn-gradient-primary {
     background: var(--primary);
     color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
     border-radius: 50px;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .btn-gradient-primary {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+    }
 }
 
 .btn-gradient-primary:hover {
@@ -2039,6 +2049,24 @@ ul {
 .cookie-buttons {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .cookie-modal {
+        padding: 20px;
+    }
+    
+    .cookie-buttons {
+        gap: 8px;
+    }
+    
+    .cookie-buttons button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 120px;
+    }
 }
 
 .cookie-settings-panel {
