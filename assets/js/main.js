@@ -7,12 +7,32 @@
     function showCookieSettings() {
         $('.cookie-banner').addClass('show').css({'display': 'flex', 'opacity': '1'});
         $('.cookie-settings-panel').show();
+        $('#accept-cookies-btn').hide();
+        $('#save-cookies-btn').show();
+        
+        // Set toggle based on existing cookie
+        const consent = getCookie('cookie-consent');
+        $('#analytics-toggle').prop('checked', consent === 'all');
     }
 
     function acceptAllCookies() {
         setCookie('cookie-consent', 'all', 365);
         $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
         $('.cookie-settings-mini').css('display', 'block');
+        enableTracking();
+    }
+
+    function saveCookieSettings() {
+        const analyticsEnabled = $('#analytics-toggle').prop('checked');
+        setCookie('cookie-consent', analyticsEnabled ? 'all' : 'necessary', 365);
+        $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
+        $('.cookie-settings-mini').css('display', 'block');
+        
+        if (analyticsEnabled) {
+            enableTracking();
+        } else {
+            disableTracking();
+        }
     }
 
     // Initialize cookie banner and button handlers
@@ -33,6 +53,11 @@
         // Handle settings button
         $('#cookie-settings-btn').on('click', function() {
             showCookieSettings();
+        });
+
+        // Handle save settings button
+        $('#save-cookies-btn').on('click', function() {
+            saveCookieSettings();
         });
 
         // Handle mini settings button
