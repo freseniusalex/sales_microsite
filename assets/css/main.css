@@ -1851,7 +1851,9 @@ ul {
 .scroll-icon {
     font-size: 2rem;
     animation: bounceArrow 2s infinite;
-    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 @media (max-width: 576px) {
