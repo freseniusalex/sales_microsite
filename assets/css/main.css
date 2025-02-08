@@ -1599,7 +1599,13 @@ ul {
 }
 
 @media (max-width: 991px) {
-  #header .header-wrap .action .btn-gradient-primary {
+  #header .header-wrap .action > .btn-gradient-primary {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #header .header-wrap .mobile-menu-list .btn-gradient-primary {
     display: none;
   }
 }
