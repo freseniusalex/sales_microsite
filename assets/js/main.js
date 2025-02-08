@@ -12,7 +12,7 @@
         
         // Set toggle based on existing cookie
         const consent = getCookie('cookie-consent');
-        $('#analytics-toggle').prop('checked', consent === 'all');
+        $('#analytics-toggle').prop('checked', consent === 'all' || !consent);
     }
 
     function acceptAllCookies() {
