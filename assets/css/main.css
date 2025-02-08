@@ -1754,7 +1754,7 @@ ul {
 /* Gradient CTA Section */
 .cta-gradient-section {
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-    margin: 4rem 0;
+    margin: 5rem 0;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -1831,7 +1831,7 @@ ul {
 
 /* Scroll Marker Styles */
 .scroll-marker-mobile {
-    margin: 4rem 0;
+    margin: 5rem 0 2rem 0;
     text-align: center;
     width: 100%;
 }
@@ -1991,6 +1991,20 @@ ul {
     width: 100%;
     height: 300px;
     object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .innovation-image {
+        width: 32%;
+        display: inline-block;
+        margin-right: 1%;
+    }
+    .innovation-image:last-child {
+        margin-right: 0;
+    }
+    .innovation-image img {
+        height: 150px;
+    }
 }
 .page-info {
     display: flex;
