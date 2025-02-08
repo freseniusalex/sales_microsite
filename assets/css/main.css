@@ -1598,8 +1598,8 @@ ul {
   padding: 0.8125rem 1.625rem;
 }
 
-@media (max-width: 576px) {
-  #header .header-wrap .action .btn--primary {
+@media (max-width: 991px) {
+  #header .header-wrap .action .btn-gradient-primary {
     display: none;
   }
 }
@@ -1632,8 +1632,13 @@ ul {
   font-size: 0.875rem;
   font-weight: 400;
   transition: 0.3s ease;
-  font-family: 'Jost', sans-serif; /* Added Jost font */
-  font-size: 1.2rem; /* Increased font size */
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+}
+
+#header .header-wrap .mobile-menu-list .btn-gradient-primary {
+  color: #fff;
+  font-weight: 700;
 }
 
 #header .header-wrap .mobile-menu-list a.active {
