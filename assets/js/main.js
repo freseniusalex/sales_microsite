@@ -10,9 +10,10 @@
         $('#accept-cookies-btn').hide();
         $('#save-cookies-btn').show();
         
-        // Set toggle based on existing cookie
         const consent = getCookie('cookie-consent');
-        $('#analytics-toggle').prop('checked', consent === 'all' || !consent);
+        // If banner shown first time, tracking off by default
+        // If settings opened after consent, show actual state
+        $('#analytics-toggle').prop('checked', consent ? consent === 'all' : true);
     }
 
     function acceptAllCookies() {
@@ -20,6 +21,7 @@
         $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
         $('.cookie-settings-mini').css('display', 'block');
         enableTracking();
+        $('#analytics-toggle').prop('checked', true);
     }
 
     function saveCookieSettings() {
@@ -40,6 +42,8 @@
         if (!getCookie('cookie-consent')) {
             $('.cookie-banner').addClass('show').css({'display': 'flex', 'opacity': '1'});
             $('.cookie-settings-mini').hide();
+            $('#analytics-toggle').prop('checked', false);
+            disableTracking();
         } else {
             $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
             $('.cookie-settings-mini').css('display', 'block');
