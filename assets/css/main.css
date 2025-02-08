@@ -1831,7 +1831,7 @@ ul {
 
 /* Scroll Marker Styles */
 .scroll-marker-mobile {
-    margin: 3rem 0;
+    margin: 4rem 0;
     text-align: center;
     width: 100%;
 }
@@ -1862,6 +1862,15 @@ ul {
     }
     .banner-subtitle {
         font-size: 1rem !important;
+    }
+    .slider-wrap {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    #faq .section-header, 
+    .accordion {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
