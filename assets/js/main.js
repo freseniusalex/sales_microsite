@@ -4,6 +4,17 @@
 	'use strict';
 
 	$(document).ready(function () {
+    function showCookieSettings() {
+        $('.cookie-banner').addClass('show').css({'display': 'flex', 'opacity': '1'});
+        $('.cookie-settings-panel').show();
+    }
+
+    function acceptAllCookies() {
+        setCookie('cookie-consent', 'all', 365);
+        $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
+        $('.cookie-settings-mini').css('display', 'block');
+    }
+
     // Initialize cookie banner and button handlers
     setTimeout(function() {
         if (!getCookie('cookie-consent')) {
@@ -15,12 +26,12 @@
         }
 
         // Handle accept all cookies button
-        $('.cookie-buttons .btn-gradient-primary').last().on('click', function() {
+        $('#accept-cookies-btn').on('click', function() {
             acceptAllCookies();
         });
 
         // Handle settings button
-        $('.cookie-buttons .btn-gradient-primary').first().on('click', function() {
+        $('#cookie-settings-btn').on('click', function() {
             showCookieSettings();
         });
 
