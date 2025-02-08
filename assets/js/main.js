@@ -5,12 +5,15 @@
 
 	$(document).ready(function () {
     // Initialize cookie banner
-    if (!getCookie('cookie-consent')) {
-        $('.cookie-banner').addClass('show');
-        $('.cookie-settings-mini').hide();
-    } else {
-        $('.cookie-settings-mini').show();
-    }
+    setTimeout(function() {
+        if (!getCookie('cookie-consent')) {
+            $('.cookie-banner').addClass('show').css({'display': 'flex', 'opacity': '1'});
+            $('.cookie-settings-mini').hide();
+        } else {
+            $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
+            $('.cookie-settings-mini').css('display', 'block');
+        }
+    }, 1000);
 		// odometer init
 		if ($('.odometer').length) {
 			var odo = $('.odometer');

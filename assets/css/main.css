@@ -1999,6 +1999,9 @@ ul {
     display: none;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .cookie-banner.show {
