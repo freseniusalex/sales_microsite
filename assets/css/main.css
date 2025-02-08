@@ -317,7 +317,7 @@ ul {
 
 @media (max-width: 576px) {
     #home .gy-5 {
-        --bs-gutter-y: 7rem;
+        --bs-gutter-y: 3rem;
     }
 }
 
@@ -1831,7 +1831,7 @@ ul {
 
 /* Scroll Marker Styles */
 .scroll-marker-mobile {
-    margin: 5rem 0 2rem 0;
+    margin: 1rem 0 2rem 0 !important;
     text-align: center;
     width: 100%;
 }
@@ -1846,6 +1846,7 @@ ul {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
+    margin-top: 1.5rem !important;
 }
 
 .scroll-icon {
