@@ -1569,6 +1569,9 @@ ul {
 }
 
 @media (max-width: 1023px) {
+  #header .header-wrap .menu ul li a {
+    font-size: 0.875rem;
+  }
   #header .header-wrap .action .btn--primary {
     font-size: 0.875rem;
   }
