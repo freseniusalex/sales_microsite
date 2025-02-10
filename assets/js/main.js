@@ -394,7 +394,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		},
 		{
-			threshold: 0.6, // Trigger when 60% of the section is visible
+			threshold: 0.2, // Lower threshold for better detection
+			rootMargin: '-20% 0px -20% 0px' // Add margins to improve visibility detection
 		}
 	);
 
