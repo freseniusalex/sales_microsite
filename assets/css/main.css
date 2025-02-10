@@ -1556,6 +1556,16 @@ ul {
 
 #header .header-wrap .logo img {
   width: 165px;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@media (max-width: 991px) {
+  #header .header-wrap .logo img {
+    width: 165px;
+    height: auto;
+  }
 }
 
 @media (max-width: 991px) {
