@@ -1568,6 +1568,12 @@ ul {
   }
 }
 
+@media (max-width: 1023px) {
+  #header .header-wrap .action .btn--primary {
+    font-size: 0.875rem;
+  }
+}
+
 @media (max-width: 991px) {
   #header .header-wrap .menu {
     display: none;
