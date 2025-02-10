@@ -1568,7 +1568,7 @@ ul {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   #header .header-wrap .menu ul li a {
     font-size: 0.875rem !important;
   }
@@ -1590,7 +1590,6 @@ ul {
 
 #header .header-wrap .menu ul li a {
   color: #000;
-  font-size: 0.875rem;
   font-weight: 400;
   transition: 0.3s ease;
   font-family: 'Jost', sans-serif; /* Added Jost font */
