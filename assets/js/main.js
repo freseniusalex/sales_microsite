@@ -513,15 +513,29 @@ class VisitorEmulator {
             console.log('Fetching visitor data...', {
                 timestamp: new Date().toISOString(),
                 visitors: this.currentVisitors,
-                source: 'analytics.example.com'
+                source: 'analytics.freseniusinstruments.com'
             });
         }
     }
 
     start() {
+        // Show initial number immediately
         this.currentVisitors = this.calculateVisitors();
-        setTimeout(() => this.update(), 300); // Update after 300ms
+        const visitorElement = document.getElementById('visitorCount');
+        if (visitorElement) {
+            const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
+            visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
+            visitorElement.style.opacity = '1';
+        }
+        // Schedule next updates
         setInterval(() => this.update(), 20000);
+        
+        // Simulate initial API call
+        console.log('Fetching visitor data...', {
+            timestamp: new Date().toISOString(),
+            visitors: this.currentVisitors,
+            source: 'analytics.freseniusinstruments.com'
+        });
     }
 }
 

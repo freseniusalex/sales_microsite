@@ -2664,13 +2664,13 @@ input:disabled + .toggle-slider.primary-color {
     margin-bottom: -0.5rem;
 }
 .visitor-counter {
-    background: rgba(var(--primary-rgb), 0.1);
+    background: rgba(32, 53, 86, 0.1);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     display: inline-flex;
     align-items: center;
     font-size: 1rem;
-    color: var(--primary);
+    color: #203556;
     animation: fadeIn 0.5s ease-in;
 }
 
