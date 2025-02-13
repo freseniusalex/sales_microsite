@@ -499,14 +499,19 @@ class VisitorEmulator {
     update() {
         const now = Date.now();
         if (now - this.lastUpdate > 20000) { // Update every 20 seconds
+            const oldVisitors = this.currentVisitors;
             this.currentVisitors = this.calculateVisitors();
             this.lastUpdate = now;
             
-            // Update the display
+            // Update the display with fade transition
             const visitorElement = document.getElementById('visitorCount');
             if (visitorElement) {
-                const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
-                visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
+                visitorElement.style.opacity = '0';
+                setTimeout(() => {
+                    const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
+                    visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
+                    visitorElement.style.opacity = '1';
+                }, 300);
             }
             
             // Simulate API call in console
