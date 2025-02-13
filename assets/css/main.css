@@ -344,6 +344,7 @@ ul {
     font-size: 5rem;
     font-weight: 1000;
     line-height: 120%;
+    font-family: var(--heading-font);
  /* 96px */
 }
 
