@@ -412,6 +412,9 @@ ul {
         width: 745px;
         height: 750px;
     }
+    #home .banner-img .image-box::after {
+        width: 800px;
+    }
 }
 
 @media (min-width: 1200px) {
