@@ -468,9 +468,15 @@ class VisitorEmulator {
 
     calculateVisitors() {
         const timeRange = this.getCurrentTimeRange();
+        // Increase probability of current visitor count by adding weight
+        const currentVisitors = this.currentVisitors;
         const rand = Math.random() * 100;
         let sum = 0;
         let visitors = 0;
+
+        if (currentVisitors > 0 && Math.random() < 0.7) { // 70% chance to keep current count
+            return currentVisitors;
+        }
 
         for (let i = 0; i < timeRange.ranges.length; i++) {
             sum += timeRange.ranges[i];
