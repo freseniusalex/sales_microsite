@@ -503,15 +503,17 @@ class VisitorEmulator {
             this.currentVisitors = this.calculateVisitors();
             this.lastUpdate = now;
             
-            // Update the display with fade transition
+            // Update the display with CSS transition
             const visitorElement = document.getElementById('visitorCount');
             if (visitorElement) {
+                const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
                 visitorElement.style.opacity = '0';
-                setTimeout(() => {
-                    const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
+                requestAnimationFrame(() => {
                     visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
-                    visitorElement.style.opacity = '1';
-                }, 300);
+                    requestAnimationFrame(() => {
+                        visitorElement.style.opacity = '1';
+                    });
+                });
             }
             
             // Simulate API call in console
