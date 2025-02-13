@@ -9,7 +9,7 @@
         $('.cookie-settings-panel').show();
         $('#accept-cookies-btn').hide();
         $('#save-cookies-btn').show();
-        
+
         const consent = getCookie('cookie-consent');
         // If banner shown first time, tracking off by default
         // If settings opened after consent, show actual state
@@ -29,7 +29,7 @@
         setCookie('cookie-consent', analyticsEnabled ? 'all' : 'necessary', 365);
         $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
         $('.cookie-settings-mini').css('display', 'block');
-        
+
         if (analyticsEnabled) {
             enableTracking();
         } else {
@@ -405,3 +405,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (section) observer.observe(section);
 	});
 });
+
+function enableTracking() {
+    // Enable Google Analytics tracking (assuming this is already set up)
+    window['ga-disable-G-SLQXTEFY0M'] = false;
+    //Enable LinkedIn tracking
+    if (getCookie('cookie-consent') === 'all') {
+        window.lintrk('track', { conversion_id: 19850954 });
+    }
+}
+
+function disableTracking() {
+      // Disable Google Analytics tracking
+      window['ga-disable-G-SLQXTEFY0M'] = true;
+      // Disable LinkedIn tracking
+      window._linkedin_data_partner_ids = null;
+    }
