@@ -2272,8 +2272,16 @@ input:disabled + .toggle-slider.primary-color {
 
 @media (max-width: 576px) {
     .location-details {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .location-details .detail-item {
+        font-size: 0.9rem;
+    }
+    .location-details .detail-item iconify-icon {
+        font-size: 1rem;
     }
 }
 
