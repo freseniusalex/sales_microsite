@@ -1,0 +1,134 @@
+00:00 – 05:00 Uhr
+
+0 Besucher: 70%
+1 Besucher: 20%
+2 Besucher: 7%
+3+ Besucher: 3%
+Schwankung: ±1
+05:00 – 07:00 Uhr
+
+0 Besucher: 50%
+1 Besucher: 30%
+2 Besucher: 15%
+3+ Besucher: 5%
+Schwankung: -1 bis +2
+07:00 – 09:00 Uhr
+
+0 Besucher: 30%
+1 Besucher: 40%
+2 Besucher: 20%
+3-4 Besucher: 9%
+5+ Besucher: 1%
+Schwankung: -2 bis +2
+09:00 – 11:00 Uhr
+
+0 Besucher: 20%
+1 Besucher: 40%
+2 Besucher: 25%
+3-4 Besucher: 12%
+5+ Besucher: 3%
+Schwankung: -2 bis +3
+11:00 – 13:00 Uhr
+
+0 Besucher: 15%
+1 Besucher: 35%
+2 Besucher: 30%
+3-4 Besucher: 15%
+5+ Besucher: 5%
+Schwankung: -2 bis +3
+13:00 – 15:00 Uhr
+
+0 Besucher: 10%
+1 Besucher: 35%
+2 Besucher: 35%
+3-4 Besucher: 15%
+5+ Besucher: 5%
+Schwankung: -2 bis +3
+15:00 – 17:00 Uhr
+
+0 Besucher: 5%
+1 Besucher: 30%
+2 Besucher: 40%
+3-4 Besucher: 20%
+5+ Besucher: 5%
+Schwankung: -2 bis +3
+17:00 – 19:00 Uhr
+
+0 Besucher: 3%
+1 Besucher: 25%
+2 Besucher: 40%
+3-4 Besucher: 25%
+5+ Besucher: 7%
+Schwankung: -2 bis +3
+19:00 – 21:00 Uhr
+
+0 Besucher: 2%
+1 Besucher: 20%
+2 Besucher: 40%
+3-4 Besucher: 30%
+5+ Besucher: 8%
+Schwankung: -2 bis +3
+21:00 – 23:00 Uhr
+
+0 Besucher: 5%
+1 Besucher: 30%
+2 Besucher: 40%
+3-4 Besucher: 20%
+5+ Besucher: 5%
+Schwankung: -2 bis +3
+23:00 – 00:00 Uhr
+
+0 Besucher: 15%
+1 Besucher: 40%
+2 Besucher: 30%
+3-4 Besucher: 12%
+5+ Besucher: 3%
+Schwankung: -2 bis +2
+Freitagabend (18:00 – 00:00 Uhr)
+
+0 Besucher: 1%
+1 Besucher: 10%
+2 Besucher: 30%
+3-4 Besucher: 35%
+5-6 Besucher: 15%
+7-10 Besucher: 9%
+Schwankung: -3 bis +5
+Samstag (10:00 – 22:00 Uhr)
+
+0 Besucher: 2%
+1 Besucher: 10%
+2 Besucher: 30%
+3-4 Besucher: 35%
+5-6 Besucher: 15%
+7-10 Besucher: 8%
+Schwankung: -3 bis +5
+Sonntagabend (18:00 – 22:00 Uhr)
+
+0 Besucher: 2%
+1 Besucher: 15%
+2 Besucher: 35%
+3-4 Besucher: 30%
+5-6 Besucher: 10%
+7-10 Besucher: 8%
+Schwankung: -2 bis +4
+Schwankungsmechanik
+
+Alle 20 Sekunden Aktualisierung
+50% Wahrscheinlichkeit: Erhöhung um +1 bis +4
+50% Wahrscheinlichkeit: Verringerung um -1 bis -4
+Neue Zahl bleibt immer im Bereich der jeweiligen Tageszeit
+Fake-Datenquelle für Realismus
+
+fetch("https://analytics.example.com/get-live-visitors")
+Antwort simuliert mit JSON-Objekt (z. B. "currentVisitors": 8, "trend": "up")
+Verzögerung von 300-700 ms, um echte API-Abfrage zu simulieren
+Fake-Logs in der Konsole, um Eindruck zu erwecken, dass echte Daten abgefragt werden
+Cookie für Konsistenz bei Rückkehr
+
+Besucherzahl wird in einem Cookie gespeichert
+Ablaufzeit des Cookies zufällig zwischen 1-2 Minuten
+Bei Rückkehr innerhalb dieser Zeit wird gleiche oder leicht veränderte Zahl angezeigt
+Nach Ablauf wird neue Zahl normal berechnet
+Zusätzliche Realismus-Verbesserungen
+
+Ab und zu größere Schwankungen, um Traffic-Peaks zu simulieren
