@@ -514,7 +514,8 @@ class VisitorEmulator {
 
     start() {
         this.currentVisitors = this.calculateVisitors();
-        setInterval(() => this.update(), 2000);
+        this.update(); // Update immediately
+        setInterval(() => this.update(), 20000); // Then update every 20 seconds
     }
 }
 
