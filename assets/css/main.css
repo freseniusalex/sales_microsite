@@ -423,10 +423,10 @@ ul {
         margin-left: calc((100% - 1140px) / -2);
         width: 745px;
         height: 750px;
-    }
-
-    #home .banner-img .image-box::after {
-        height: 240px;
+        &::after {
+            height: 200px;
+            width: 900px;
+        }
     }
 }
 
@@ -439,6 +439,10 @@ ul {
         margin-left: calc((100% - 1320px) / -2);
         width: 823px;
         height: 823px;
+        &::after {
+            height: 240px;
+            width: 1150px;
+        }
     }
 }
 
@@ -2027,7 +2031,7 @@ ul {
     .row.mt-5 {
         display: flex;
         gap: 10px;
-        margin: 2rem -10px0;
+        margin: 2rem -10px 0;
     }
 
     .innovation-image {
