@@ -507,13 +507,11 @@ class VisitorEmulator {
             const visitorElement = document.getElementById('visitorCount');
             if (visitorElement) {
                 const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
-                visitorElement.style.opacity = '0';
-                requestAnimationFrame(() => {
+                visitorElement.classList.add('updating');
+                setTimeout(() => {
                     visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
-                    requestAnimationFrame(() => {
-                        visitorElement.style.opacity = '1';
-                    });
-                });
+                    visitorElement.classList.remove('updating');
+                }, 300);
             }
             
             // Simulate API call in console
