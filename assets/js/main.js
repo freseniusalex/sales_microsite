@@ -20,8 +20,13 @@
         setCookie('cookie-consent', 'all', 365);
         $('.cookie-banner').removeClass('show').css({'display': 'none', 'opacity': '0'});
         $('.cookie-settings-mini').css('display', 'block');
-        enableTracking();
         $('#analytics-toggle').prop('checked', true);
+        
+        // Initialize all tracking
+        window['ga-disable-G-SLQXTEFY0M'] = false;
+        if(window.lintrk) {
+            window.lintrk('track', { conversion_id: 19850954 });
+        }
     }
 
     function saveCookieSettings() {
@@ -407,17 +412,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function enableTracking() {
-    // Enable Google Analytics tracking (assuming this is already set up)
     window['ga-disable-G-SLQXTEFY0M'] = false;
-    //Enable LinkedIn tracking
-    if (getCookie('cookie-consent') === 'all') {
+    if(window.lintrk) {
         window.lintrk('track', { conversion_id: 19850954 });
     }
+    $('#analytics-toggle').prop('checked', true);
 }
 
 function disableTracking() {
-      // Disable Google Analytics tracking
-      window['ga-disable-G-SLQXTEFY0M'] = true;
-      // Disable LinkedIn tracking
-      window._linkedin_data_partner_ids = null;
-    }
+    window['ga-disable-G-SLQXTEFY0M'] = true;
+    window._linkedin_data_partner_ids = null;
+    $('#analytics-toggle').prop('checked', false);
+}
