@@ -2674,6 +2674,12 @@ input:disabled + .toggle-slider.primary-color {
     animation: fadeIn 0.5s ease-in;
 }
 
+@media (max-width: 576px) {
+    .visitor-counter {
+        font-size: 0.9rem;
+    }
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
