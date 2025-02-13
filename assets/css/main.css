@@ -388,7 +388,7 @@ ul {
     content: "";
     position: absolute;
     top: 15%;
-    left: -20%;
+    left: 0;
     width: 1150px;
     height: 240px;
     background: linear-gradient(90deg, transparent 0%, var(--primary) 15%, var(--primary) 100%);
