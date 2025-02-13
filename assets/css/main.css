@@ -2645,3 +2645,18 @@ input:disabled + .toggle-slider.primary-color {
     border-top-color: rgba(0, 0, 0, 0.8);
     margin-bottom: -0.5rem;
 }
+.visitor-counter {
+    background: rgba(var(--primary-rgb), 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--primary);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

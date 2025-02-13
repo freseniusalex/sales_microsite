@@ -424,3 +424,102 @@ function disableTracking() {
     window._linkedin_data_partner_ids = null;
     $('#analytics-toggle').prop('checked', false);
 }
+// Visitor Emulator
+class VisitorEmulator {
+    constructor() {
+        this.currentVisitors = 0;
+        this.timeRanges = this.initTimeRanges();
+        this.lastUpdate = Date.now();
+    }
+
+    initTimeRanges() {
+        return [
+            { start: 0, end: 5, ranges: [70, 20, 7, 3], maxVisitors: 3 },
+            { start: 5, end: 7, ranges: [50, 30, 15, 5], maxVisitors: 4 },
+            { start: 7, end: 9, ranges: [30, 40, 20, 9, 1], maxVisitors: 6 },
+            { start: 9, end: 11, ranges: [20, 40, 25, 12, 3], maxVisitors: 7 },
+            { start: 11, end: 13, ranges: [15, 35, 30, 15, 5], maxVisitors: 7 },
+            { start: 13, end: 15, ranges: [10, 35, 35, 15, 5], maxVisitors: 7 },
+            { start: 15, end: 17, ranges: [5, 30, 40, 20, 5], maxVisitors: 7 },
+            { start: 17, end: 19, ranges: [3, 25, 40, 25, 7], maxVisitors: 8 },
+            { start: 19, end: 21, ranges: [2, 20, 40, 30, 8], maxVisitors: 8 },
+            { start: 21, end: 23, ranges: [5, 30, 40, 20, 5], maxVisitors: 7 },
+            { start: 23, end: 24, ranges: [15, 40, 30, 12, 3], maxVisitors: 6 }
+        ];
+    }
+
+    getCurrentTimeRange() {
+        const now = new Date();
+        const hour = now.getHours();
+        const day = now.getDay();
+        
+        // Special handling for weekend
+        if (day === 5 && hour >= 18) { // Friday evening
+            return { ranges: [1, 10, 30, 35, 15, 9], maxVisitors: 10 };
+        } else if (day === 6 && hour >= 10 && hour <= 22) { // Saturday
+            return { ranges: [2, 10, 30, 35, 15, 8], maxVisitors: 10 };
+        } else if (day === 0 && hour >= 18 && hour <= 22) { // Sunday evening
+            return { ranges: [2, 15, 35, 30, 10, 8], maxVisitors: 10 };
+        }
+        
+        // Regular weekday
+        return this.timeRanges.find(range => hour >= range.start && hour < range.end) || this.timeRanges[0];
+    }
+
+    calculateVisitors() {
+        const timeRange = this.getCurrentTimeRange();
+        const rand = Math.random() * 100;
+        let sum = 0;
+        let visitors = 0;
+
+        for (let i = 0; i < timeRange.ranges.length; i++) {
+            sum += timeRange.ranges[i];
+            if (rand <= sum) {
+                visitors = i;
+                break;
+            }
+        }
+
+        // Apply random fluctuation
+        if (Math.random() > 0.5) {
+            visitors += Math.floor(Math.random() * 3) + 1;
+        } else {
+            visitors = Math.max(0, visitors - Math.floor(Math.random() * 2));
+        }
+
+        return Math.min(visitors, timeRange.maxVisitors);
+    }
+
+    update() {
+        const now = Date.now();
+        if (now - this.lastUpdate > 20000) { // Update every 20 seconds
+            this.currentVisitors = this.calculateVisitors();
+            this.lastUpdate = now;
+            
+            // Update the display
+            const visitorElement = document.getElementById('visitorCount');
+            if (visitorElement) {
+                const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
+                visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
+            }
+            
+            // Simulate API call in console
+            console.log('Fetching visitor data...', {
+                timestamp: new Date().toISOString(),
+                visitors: this.currentVisitors,
+                source: 'analytics.example.com'
+            });
+        }
+    }
+
+    start() {
+        this.currentVisitors = this.calculateVisitors();
+        setInterval(() => this.update(), 2000);
+    }
+}
+
+// Start the emulator when document is ready
+document.addEventListener('DOMContentLoaded', () => {
+    const emulator = new VisitorEmulator();
+    emulator.start();
+});
