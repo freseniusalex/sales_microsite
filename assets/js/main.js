@@ -427,9 +427,12 @@ function disableTracking() {
 // Visitor Emulator
 class VisitorEmulator {
     constructor() {
-        this.currentVisitors = 0;
+        const savedState = localStorage.getItem('visitorState');
+        const state = savedState ? JSON.parse(savedState) : null;
+        this.currentVisitors = state ? state.currentVisitors : 0;
         this.timeRanges = this.initTimeRanges();
-        this.lastUpdate = Date.now();
+        this.lastUpdate = state ? state.lastUpdate : Date.now();
+        this.transitioning = false;
     }
 
     initTimeRanges() {
@@ -498,19 +501,27 @@ class VisitorEmulator {
 
     update() {
         const now = Date.now();
-        if (now - this.lastUpdate > 20000) { // Update every 20 seconds
+        if (!this.transitioning && now - this.lastUpdate > 20000) { // Update every 20 seconds
             const oldVisitors = this.currentVisitors;
             this.currentVisitors = this.calculateVisitors();
             this.lastUpdate = now;
             
+            // Save state to localStorage
+            localStorage.setItem('visitorState', JSON.stringify({
+                currentVisitors: this.currentVisitors,
+                lastUpdate: this.lastUpdate
+            }));
+            
             // Update the display with CSS transition
             const visitorElement = document.getElementById('visitorCount');
-            if (visitorElement) {
+            if (visitorElement && !this.transitioning) {
+                this.transitioning = true;
                 const plural = this.currentVisitors !== 1 ? 'Besucher sind' : 'Besucher ist';
                 visitorElement.classList.add('updating');
                 setTimeout(() => {
                     visitorElement.textContent = `${this.currentVisitors} ${plural} gerade online`;
                     visitorElement.classList.remove('updating');
+                    this.transitioning = false;
                 }, 300);
             }
             

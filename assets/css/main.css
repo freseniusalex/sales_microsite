@@ -38,7 +38,10 @@ h1,
 
 #visitorCount {
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-out;
+    will-change: opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 #visitorCount.updating {
