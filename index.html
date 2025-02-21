@@ -220,7 +220,7 @@
 						Stellenanzeige downloaden (PDF)
 					</a>
 				</div>
-
+				
 				<div class="scroll-marker-mobile d-block d-sm-none text-center mt-4">
 					<a href="#job-requirements" class="scroll-link">
 						<div class="scroll-text mb-2">Zu den Jobanforderungen springen</div>
@@ -648,7 +648,7 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 									class="accordion-item wow animate__animated animate__fadeInUp"
 									data-wow-delay="0.2s"
 								>
-									<h2 class"accordion-header">
+									<h2 class="accordion-header">
 										<button
 											class="accordion-button"
 											type="button"
@@ -1403,23 +1403,4 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
     "Aktive Gestaltung des Vertriebserfolgs"
   ]
 }
-</script>
-<script>
-    function updateCountdown() {
-        const endDate = new Date('March 6, 2025 03:00:00 GMT+0200').getTime();
-        const duration = 13 * 24 * 60 * 60 * 1000; // 13 days in milliseconds
-
-        function calculate() {
-            const now = new Date().getTime();
-            let timeLeft = endDate - now;
-
-            if (timeLeft < 0) {
-                // Calculate the number of full periods since the end date
-                const periods = Math.floor((now - endDate) / duration);
-                // Calculate the next reset point
-                const nextReset = endDate + (periods + 1) * duration;
-                timeLeft = nextReset - now;
-            }
-        }
-    }
 </script>
