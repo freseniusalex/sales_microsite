@@ -68,6 +68,8 @@ body {
     font-size: 1rem;
     position: relative;
     z-index: 1;
+    color: #203556;
+    font-weight: 500;
 }
 
 h1,
