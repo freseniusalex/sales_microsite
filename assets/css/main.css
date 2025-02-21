@@ -65,7 +65,7 @@ body {
 
 #countdown {
     letter-spacing: 0.5px;
-    font-size: 1rem;
+    font-size: 1rem !important;
     position: relative;
     z-index: 1;
     color: #203556;
