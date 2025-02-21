@@ -1412,20 +1412,15 @@ Man kann sich, gerade im Vertrieb, selber die Aufgaben aufteilen und seinem grö
 
 <script>
 function updateCountdown() {
-    const endDate = new Date(new Date().getTime() + (13 * 24 * 60 * 60 * 1000)).getTime();
+    const fixedStartDate = new Date('2025-02-20T03:00:00').getTime();
     const duration = 13 * 24 * 60 * 60 * 1000; // 13 days in milliseconds
 
     function calculate() {
         const now = new Date().getTime();
-        let timeLeft = endDate - now;
-
-        if (timeLeft < 0) {
-            // Calculate the number of full periods since the end date
-            const periods = Math.floor((now - endDate) / duration);
-            // Calculate the next reset point
-            const nextReset = endDate + (periods + 1) * duration;
-            timeLeft = nextReset - now;
-        }
+        const timeSinceStart = now - fixedStartDate;
+        const periodsPassed = Math.floor(timeSinceStart / duration);
+        const currentPeriodStart = fixedStartDate + (periodsPassed * duration);
+        const timeLeft = (currentPeriodStart + duration) - now;
 
         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
